@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
+import { lazyWithRetry } from "@/lib/lazyWithRetry";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
@@ -14,14 +15,14 @@ import { localBusinessSchema } from "@/seo/schemas";
 import { LegacyCarRedirect } from "@/components/LegacyRedirects";
 import { ROUTES } from "@/seo/seoConfig";
 
-const Index = lazy(() => import("./pages/Index.tsx"));
-const VipFleet = lazy(() => import("./pages/VipFleet.tsx"));
-const VipFindCarQuizPage = lazy(() => import("./pages/VipFindCarQuizPage.tsx"));
-const About = lazy(() => import("./pages/About.tsx"));
-const Contact = lazy(() => import("./pages/Contact.tsx"));
-const Reservation = lazy(() => import("./pages/Reservation.tsx"));
-const CarDetail = lazy(() => import("./pages/CarDetail.tsx"));
-const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+const Index = lazyWithRetry(() => import("./pages/Index.tsx"));
+const VipFleet = lazyWithRetry(() => import("./pages/VipFleet.tsx"));
+const VipFindCarQuizPage = lazyWithRetry(() => import("./pages/VipFindCarQuizPage.tsx"));
+const About = lazyWithRetry(() => import("./pages/About.tsx"));
+const Contact = lazyWithRetry(() => import("./pages/Contact.tsx"));
+const Reservation = lazyWithRetry(() => import("./pages/Reservation.tsx"));
+const CarDetail = lazyWithRetry(() => import("./pages/CarDetail.tsx"));
+const NotFound = lazyWithRetry(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
 
