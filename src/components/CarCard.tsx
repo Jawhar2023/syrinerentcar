@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Zap, Gauge, Star, Clock, Users } from "lucide-react";
 import type { Car } from "@/data/cars";
-import { CarImage } from "@/components/CarImage";
 import { carImageAlt } from "@/lib/seoImages";
 import { cn } from "@/lib/utils";
 import { ROUTES } from "@/seo/seoConfig";
@@ -89,18 +88,15 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
                 : "relative h-48 overflow-hidden"
           }
         >
-          <motion.div
-            className="h-full w-full"
+          <motion.img
+            src={car.image}
+            alt={carImageAlt(car)}
+            className="h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
             animate={{ scale: hovered ? 1.1 : 1 }}
             transition={{ duration: 0.4 }}
-          >
-            <CarImage
-              src={car.image}
-              alt={carImageAlt(car)}
-              className="h-full w-full object-cover"
-              loading="lazy"
-            />
-          </motion.div>
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
 
           {/* Badge */}

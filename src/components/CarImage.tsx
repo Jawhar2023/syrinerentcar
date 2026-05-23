@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { carImageSources } from "@/lib/seoImages";
 
 interface CarImageProps {
   src: string;
@@ -9,18 +8,15 @@ interface CarImageProps {
   loading?: "lazy" | "eager";
 }
 
-/** Fleet photo with optional WebP source and lazy loading. */
+/** Fleet photo — uses catalog JPEG/PNG from /public (no WebP unless you add matching .webp files). */
 export function CarImage({ src, alt, className, loading = "lazy" }: CarImageProps) {
-  const { webp, fallback } = carImageSources(src);
-
-  if (!webp) {
-    return <img src={fallback} alt={alt} className={className} loading={loading} decoding="async" />;
-  }
-
   return (
-    <picture>
-      <source type="image/webp" srcSet={webp} />
-      <img src={fallback} alt={alt} className={cn(className)} loading={loading} decoding="async" />
-    </picture>
+    <img
+      src={src}
+      alt={alt}
+      className={cn("block", className)}
+      loading={loading}
+      decoding="async"
+    />
   );
 }
