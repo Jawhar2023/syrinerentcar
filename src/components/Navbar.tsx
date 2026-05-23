@@ -66,7 +66,7 @@ const Navbar = ({ variant = "default" }: NavbarProps) => {
         ? "glass-strong border-b border-primary/25"
         : mirrorNav
           ? "bg-transparent shadow-none border-none"
-          : "border-b border-white/[0.08] bg-background/55 backdrop-blur-xl";
+          : "border-b border-border bg-background/95 backdrop-blur-xl shadow-sm";
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     cn(

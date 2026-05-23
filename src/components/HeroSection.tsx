@@ -6,12 +6,6 @@ import ElectricBorder from "@/components/ElectricBorder";
 import heroBackgroundVideo from "@/video/Scène_initiale_-_2026-05-23_202605231843.mp4";
 import { ROUTES } from "@/seo/seoConfig";
 
-interface HeroSectionProps {
-  /** French SEO H1 (one per home page). */
-  seoH1?: string;
-}
-
-/** Primary accent `#dd0426` */
 const ELECTRIC_BORDER_HEX = "#dd0426";
 
 const fadeUp = {
@@ -19,7 +13,7 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
-const HeroSection = ({ seoH1 }: HeroSectionProps) => {
+const HeroSection = () => {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.dir() === "rtl";
   const isArabic = i18n.language?.startsWith("ar") ?? false;
@@ -87,26 +81,7 @@ const HeroSection = ({ seoH1 }: HeroSectionProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          {seoH1 ? (
-            <span className="block">{seoH1}</span>
-          ) : (
-            <>
-              <span className="block">{t("hero.headLine1")}</span>
-              {t("hero.headLine2") ? (
-                <span
-                  className={cn(
-                    "block bg-clip-text text-transparent drop-shadow-[0_0_32px_hsl(351_96%_44%/0.45)]",
-                    isRtl
-                      ? "bg-gradient-to-l from-primary via-[hsl(351_96%_52%)] to-[hsl(351_82%_36%)]"
-                      : "bg-gradient-to-r from-primary via-[hsl(351_96%_52%)] to-[hsl(351_82%_36%)]",
-                  )}
-                >
-                  {t("hero.headLine2")}
-                </span>
-              ) : null}
-              {t("hero.headLine3") ? <span className="block">{t("hero.headLine3")}</span> : null}
-            </>
-          )}
+          <span className="block">{t("hero.seoH1")}</span>
         </motion.h1>
 
         {t("hero.description") ? (

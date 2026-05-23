@@ -86,8 +86,8 @@ const CarShowcase = ({
             "rounded-full px-5 py-2 text-sm font-medium transition-all duration-300",
             categoryPillVariant === "vipFleet"
               ? activeType === type
-                ? "border border-transparent bg-primary text-primary-foreground shadow-[0_0_22px_hsl(351_96%_44%/0.45)]"
-                : "border border-slate-700/90 bg-transparent text-slate-400 hover:border-primary/40 hover:text-slate-200"
+                ? "border border-transparent bg-primary text-primary-foreground shadow-[0_0_22px_hsl(351_96%_44%/0.25)]"
+                : "border border-border bg-white text-muted-foreground hover:border-primary/40 hover:text-foreground"
               : activeType === type
                 ? "bg-primary text-primary-foreground neon-glow"
                 : "border border-border bg-muted/20 text-muted-foreground hover:border-primary/40 hover:text-foreground",
@@ -101,7 +101,7 @@ const CarShowcase = ({
 
   const gridClass =
     cardSize === "vip"
-      ? "mx-auto max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2"
+      ? "mx-auto max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
       : cardSize === "large"
         ? "mx-auto max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         : "grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4";

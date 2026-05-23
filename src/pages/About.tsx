@@ -69,10 +69,10 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[hsl(230_30%_3%)] text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <SEOHead page="about" />
       <JsonLd schema={breadcrumbSchema(crumbs)} />
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(351_96%_44%/0.1),transparent_55%)]" />
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(351_96%_44%/0.05),transparent_55%)]" />
 
       <header>
         <Navbar variant="about" />

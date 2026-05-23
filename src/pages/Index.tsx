@@ -3,13 +3,14 @@ import HeroSection from "@/components/HeroSection";
 import SimpleProcessSection from "@/components/SimpleProcessSection";
 import CarShowcase from "@/components/CarShowcase";
 import FeaturesSection from "@/components/FeaturesSection";
+import { HomeLocationSection } from "@/components/HomeLocationSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FooterSection from "@/components/FooterSection";
 import { useMergedFleetCars } from "@/hooks/useDrivexData";
 import { SEOHead } from "@/seo/SEOHead";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbSchema } from "@/seo/schemas";
-import { PAGES, ROUTES } from "@/seo/seoConfig";
+import { ROUTES } from "@/seo/seoConfig";
 
 const Index = () => {
   const fleet = useMergedFleetCars();
@@ -24,21 +25,7 @@ const Index = () => {
       </header>
 
       <main>
-        <HeroSection seoH1={PAGES.home.h1} />
-
-        <section aria-labelledby="process-heading">
-          <h2 id="process-heading" className="sr-only">
-            Comment louer une voiture chez Syrine Rent Car
-          </h2>
-          <SimpleProcessSection />
-        </section>
-
-        <section id="features" aria-labelledby="features-heading">
-          <h2 id="features-heading" className="sr-only">
-            Avantages de la location à M&apos;saken
-          </h2>
-          <FeaturesSection />
-        </section>
+        <HeroSection />
 
         <section id="cars" aria-labelledby="fleet-preview-heading">
           <h2 id="fleet-preview-heading" className="sr-only">
@@ -47,11 +34,27 @@ const Index = () => {
           <CarShowcase sourceCars={fleet} cardSize="large" showPromoToolbar />
         </section>
 
-        <section id="reviews" aria-labelledby="reviews-heading">
+        <section aria-labelledby="reviews-heading">
           <h2 id="reviews-heading" className="sr-only">
             Avis clients Google
           </h2>
           <TestimonialsSection />
+        </section>
+
+        <HomeLocationSection />
+
+        <section aria-labelledby="process-heading">
+          <h2 id="process-heading" className="sr-only">
+            Comment louer une voiture chez Syrine Rent Car
+          </h2>
+          <SimpleProcessSection />
+        </section>
+
+        <section aria-labelledby="features-heading">
+          <h2 id="features-heading" className="sr-only">
+            Pourquoi Syrine Rent a Car
+          </h2>
+          <FeaturesSection />
         </section>
       </main>
 

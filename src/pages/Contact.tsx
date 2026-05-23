@@ -61,10 +61,10 @@ const Contact = () => {
     "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/12 text-primary ring-1 ring-primary/20 transition-colors group-hover:bg-primary/18 group-hover:ring-primary/30";
 
   return (
-    <div className="min-h-screen bg-[hsl(230_30%_3%)] text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <SEOHead page="contact" />
       <JsonLd schema={breadcrumbSchema(crumbs)} />
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(351_96%_44%/0.08),transparent_55%)]" />
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(351_96%_44%/0.05),transparent_55%)]" />
 
       <header>
         <Navbar variant="contact" />

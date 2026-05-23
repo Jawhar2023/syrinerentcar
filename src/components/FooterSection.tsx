@@ -42,7 +42,7 @@ export function FooterSection() {
 
   return (
     <>
-      <footer className="relative border-t border-border/50 bg-[hsl(230_28%_4%)]">
+      <footer className="relative border-t border-border bg-muted/40">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"
           aria-hidden

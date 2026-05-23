@@ -2,7 +2,7 @@ import { useState, type MouseEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { Zap, Gauge, Star, Clock, Users } from "lucide-react";
+import { Zap, Gauge, Star, Clock, Users, ChevronRight } from "lucide-react";
 import type { Car } from "@/data/cars";
 import { carImageAlt } from "@/lib/seoImages";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,7 @@ import { ROUTES } from "@/seo/seoConfig";
 interface CarCardProps {
   car: Car;
   index: number;
-  /** Taller image and typography (`large` home, `vip` VIP fleet page). */
+  /** Taller image and typography (`large` home, `vip` fleet page). */
   size?: "default" | "large" | "vip";
 }
 
@@ -19,6 +19,7 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [hovered, setHovered] = useState(false);
+  const isVip = size === "vip";
 
   const detailPath = ROUTES.fleetCar(String(car.id));
 
@@ -32,17 +33,125 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
   };
 
   const typeColors: Record<string, string> = {
-    city: "bg-emerald-500/20 text-emerald-400",
-    compact: "bg-primary/20 text-primary",
-    crossover: "bg-amber-500/20 text-amber-400",
-    suv: "bg-sky-500/20 text-sky-400",
-    luxury: "bg-amber-500/20 text-amber-400",
-    sport: "bg-red-500/20 text-red-400",
-    electric: "bg-primary/20 text-primary",
-    economy: "bg-emerald-500/20 text-emerald-400",
+    city: "bg-emerald-500/15 text-emerald-700",
+    compact: "bg-primary/15 text-primary",
+    crossover: "bg-amber-500/15 text-amber-800",
+    suv: "bg-sky-500/15 text-sky-800",
+    luxury: "bg-amber-500/15 text-amber-800",
+    sport: "bg-red-500/15 text-red-700",
+    electric: "bg-primary/15 text-primary",
+    economy: "bg-emerald-500/15 text-emerald-700",
   };
 
   const showPrice = car.pricePerDay != null && car.pricePerDay > 0;
+
+  const specItems = [
+    { icon: Gauge, label: `${car.horsepower} hp` },
+    { icon: Clock, label: car.acceleration },
+    { icon: Zap, label: car.fuelType },
+    { icon: Users, label: `${car.seats} places` },
+  ] as const;
+
+  if (isVip) {
+    return (
+      <motion.article
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.06, duration: 0.45 }}
+        id={`vip-car-${car.id}`}
+        className="group h-full"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        <motion.div
+          role="button"
+          tabIndex={0}
+          onClick={goToDetail}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              goToDetail();
+            }
+          }}
+          animate={{ y: hovered ? -4 : 0 }}
+          transition={{ type: "spring", stiffness: 400, damping: 28 }}
+          className={cn(
+            "flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-card",
+            "shadow-[0_1px_3px_rgba(15,23,42,0.06),0_8px_24px_-12px_rgba(15,23,42,0.12)]",
+            "transition-shadow duration-300 hover:border-primary/25 hover:shadow-[0_4px_20px_-8px_rgba(221,4,38,0.18)]",
+          )}
+          aria-label={t("carCard.ariaDetails", { brand: car.brand, name: car.name })}
+        >
+          {/* Square photo — full vehicle visible */}
+          <div className="relative aspect-square w-full overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100/90">
+            <div className="absolute inset-0 flex items-center justify-center p-5 sm:p-6">
+              <motion.img
+                src={car.image}
+                alt={carImageAlt(car)}
+                className="max-h-full max-w-full object-contain drop-shadow-[0_12px_28px_rgba(15,23,42,0.12)]"
+                loading="lazy"
+                decoding="async"
+                animate={{ scale: hovered ? 1.04 : 1 }}
+                transition={{ duration: 0.35 }}
+              />
+            </div>
+
+            <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
+              <span
+                className={cn(
+                  "rounded-md px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide shadow-sm",
+                  typeColors[car.type],
+                )}
+              >
+                {car.type}
+              </span>
+            </div>
+
+            <div className="absolute right-3 top-3 flex items-center gap-1 rounded-md border border-border/80 bg-white/95 px-2 py-1 text-xs font-medium shadow-sm backdrop-blur-sm">
+              <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+              <span className="text-foreground">{car.rating}</span>
+            </div>
+          </div>
+
+          {/* Details */}
+          <div className="flex flex-1 flex-col p-5">
+            <div className="mb-4">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{car.brand}</p>
+              <h3 className="font-display text-xl font-bold leading-tight text-foreground">{car.name}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{car.transmission}</p>
+            </div>
+
+            <ul className="mb-5 grid grid-cols-2 gap-2">
+              {specItems.map(({ icon: Icon, label }) => (
+                <li
+                  key={label}
+                  className="flex items-center gap-2 rounded-lg bg-muted/50 px-2.5 py-2 text-xs text-muted-foreground"
+                >
+                  <Icon className="h-3.5 w-3.5 shrink-0 text-primary" aria-hidden />
+                  <span className="truncate">{label}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-auto flex flex-col gap-2 sm:flex-row">
+              <button
+                type="button"
+                onClick={goToReservationForm}
+                className="inline-flex flex-1 items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+              >
+                {t("carCard.bookNow")}
+              </button>
+              <span className="inline-flex flex-1 items-center justify-center gap-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-foreground transition group-hover:border-primary/30 group-hover:text-primary">
+                Détails
+                <ChevronRight className="h-4 w-4" />
+              </span>
+            </div>
+          </div>
+        </motion.div>
+      </motion.article>
+    );
+  }
 
   return (
     <motion.div
@@ -71,21 +180,13 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
             goToDetail();
           }
         }}
-        className={cn(
-          "card-3d glass overflow-hidden cursor-pointer",
-          size === "vip" ? "rounded-3xl" : "rounded-2xl",
-        )}
+        className="card-3d glass cursor-pointer overflow-hidden rounded-2xl"
         style={{ transformStyle: "preserve-3d" }}
         aria-label={t("carCard.ariaDetails", { brand: car.brand, name: car.name })}
       >
-        {/* Image */}
         <div
           className={
-            size === "vip"
-              ? "relative h-64 overflow-hidden sm:h-72 md:h-80"
-              : size === "large"
-                ? "relative h-56 overflow-hidden md:h-60"
-                : "relative h-48 overflow-hidden"
+            size === "large" ? "relative h-56 overflow-hidden md:h-60" : "relative h-48 overflow-hidden"
           }
         >
           <motion.img
@@ -99,44 +200,33 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
 
-          {/* Badge */}
-          <div className="absolute top-3 left-3 flex gap-2">
-            <span className={`text-xs font-semibold px-3 py-1 rounded-full ${typeColors[car.type]}`}>
+          <div className="absolute left-3 top-3 flex gap-2">
+            <span className={`rounded-full px-3 py-1 text-xs font-semibold ${typeColors[car.type]}`}>
               {car.type}
             </span>
             {car.limitedAvailability && (
-              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-destructive/20 text-destructive urgency-pulse">
+              <span className="urgency-pulse rounded-full bg-destructive/20 px-3 py-1 text-xs font-semibold text-destructive">
                 Only 2 left!
               </span>
             )}
           </div>
 
-          {/* Rating */}
-          <div className="absolute top-3 right-3 flex items-center gap-1 glass rounded-full px-2 py-1">
-            <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
+          <div className="glass absolute right-3 top-3 flex items-center gap-1 rounded-full px-2 py-1">
+            <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
             <span className="text-xs font-semibold text-foreground">{car.rating}</span>
             <span className="text-xs text-muted-foreground">({car.reviews})</span>
           </div>
         </div>
 
-        {/* Details */}
-        <div className={size === "vip" ? "p-7" : size === "large" ? "p-6" : "p-5"}>
-          <div className={`flex items-start justify-between mb-3 ${showPrice ? "" : "mb-1"}`}>
+        <div className={size === "large" ? "p-6" : "p-5"}>
+          <div className={`mb-3 flex items-start justify-between ${showPrice ? "" : "mb-1"}`}>
             <div>
-              <p
-                className={
-                  size === "vip" ? "text-sm text-muted-foreground" : "text-xs text-muted-foreground"
-                }
-              >
-                {car.brand}
-              </p>
+              <p className="text-xs text-muted-foreground">{car.brand}</p>
               <h3
                 className={
-                  size === "vip"
-                    ? "font-display text-2xl font-bold text-foreground md:text-3xl"
-                    : size === "large"
-                      ? "font-display text-xl font-bold text-foreground md:text-2xl"
-                      : "font-display text-lg font-bold text-foreground"
+                  size === "large"
+                    ? "font-display text-xl font-bold text-foreground md:text-2xl"
+                    : "font-display text-lg font-bold text-foreground"
                 }
               >
                 {car.name}
@@ -158,21 +248,12 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
             ) : null}
           </div>
 
-          {/* Specs */}
           <motion.div
             animate={{ opacity: hovered ? 1 : 0.7, y: hovered ? 0 : 5 }}
-            className={cn(
-              "flex flex-wrap items-center gap-4 mb-4",
-              size === "vip" && "gap-5 mb-5",
-            )}
+            className="mb-4 flex flex-wrap items-center gap-4"
           >
-            <div
-              className={cn(
-                "flex items-center gap-1.5 text-muted-foreground",
-                size === "vip" ? "text-sm" : "text-xs",
-              )}
-            >
-              <Gauge className={size === "vip" ? "w-4 h-4 text-primary" : "w-3.5 h-3.5 text-primary"} />
+            <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <Gauge className="h-3.5 w-3.5 text-primary" />
               <span>{car.horsepower}hp</span>
             </div>
             {(
@@ -182,29 +263,19 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
                 [Users, String(car.seats)],
               ] as const
             ).map(([Icon, label]) => (
-              <div
-                key={label}
-                className={cn(
-                  "flex items-center gap-1.5 text-muted-foreground",
-                  size === "vip" ? "text-sm" : "text-xs",
-                )}
-              >
-                <Icon className={size === "vip" ? "w-4 h-4 text-primary" : "w-3.5 h-3.5 text-primary"} />
+              <div key={label} className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                <Icon className="h-3.5 w-3.5 text-primary" />
                 <span>{label}</span>
               </div>
             ))}
           </motion.div>
 
-          {/* CTA */}
           <motion.button
             type="button"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={goToReservationForm}
-            className={cn(
-              "w-full rounded-xl bg-primary/10 text-primary font-semibold border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-colors duration-300",
-              size === "vip" ? "py-4 text-base" : "py-3 text-sm",
-            )}
+            className="w-full rounded-xl border border-primary/20 bg-primary/10 py-3 text-sm font-semibold text-primary transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
             aria-label={t("carCard.ariaBook", { brand: car.brand, name: car.name })}
           >
             {t("carCard.bookNow")}
