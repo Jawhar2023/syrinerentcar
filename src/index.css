@@ -6,10 +6,10 @@
 
 @layer base {
   :root {
-    --background: 222 47% 7%;
+    --background: 226 49% 7%;
     --foreground: 210 40% 98%;
 
-    --card: 217 33% 17%;
+    --card: 226 49% 7%;
     --card-foreground: 210 40% 98%;
 
     --popover: 0 0% 8%;
@@ -100,12 +100,12 @@
   }
 
   .showroom-surface {
-    @apply bg-[#0a0a0a];
+    background-color: #090e1a;
   }
 
   .fleet-car-card {
-    @apply overflow-hidden rounded-2xl border border-slate-700/50 bg-card shadow-[0_8px_32px_-12px_rgba(0,0,0,0.55)];
-    @apply transition-all duration-300 hover:border-primary/40 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.2)];
+    @apply overflow-hidden rounded-2xl border border-white/[0.08] bg-background shadow-[0_4px_24px_-8px_rgba(0,0,0,0.45)];
+    @apply transition-all duration-300 hover:border-primary/35 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.18)];
   }
 
   .car-detail-page {

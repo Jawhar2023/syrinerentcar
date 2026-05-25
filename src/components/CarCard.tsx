@@ -43,7 +43,11 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
     navigate(ROUTES.reservation, { state: { reserveCarId: car.id } });
   };
 
-  const imageHeight = isVip ? "aspect-[4/3]" : isLarge ? "h-52 md:h-56" : "h-44 sm:h-48";
+  const imageHeight = isVip
+    ? "min-h-[240px] sm:min-h-[260px] md:min-h-[280px]"
+    : isLarge
+      ? "h-56 sm:h-60 md:h-64 lg:h-[17rem]"
+      : "h-48 sm:h-52 md:h-56";
 
   return (
     <motion.article
@@ -72,17 +76,17 @@ const CarCard = ({ car, index, size = "default" }: CarCardProps) => {
         aria-label={t("carCard.ariaDetails", { brand: car.brand, name: car.name })}
       >
         {/* Image */}
-        <div className={cn("relative w-full overflow-hidden showroom-surface", imageHeight)}>
+        <div className={cn("relative flex w-full items-center justify-center overflow-hidden showroom-surface", imageHeight)}>
           <motion.img
             src={car.image}
             alt={carImageAlt(car)}
-            className="h-full w-full object-cover object-center"
+            className="max-h-[94%] max-w-[98%] object-contain object-center drop-shadow-[0_20px_48px_rgba(0,0,0,0.45)]"
             loading="lazy"
             decoding="async"
-            animate={{ scale: hovered ? 1.05 : 1 }}
+            animate={{ scale: hovered ? 1.06 : 1 }}
             transition={{ duration: 0.45 }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background via-background/40 to-transparent" />
 
           <div className="absolute left-3 top-3 flex flex-wrap items-center gap-2">
             <span
