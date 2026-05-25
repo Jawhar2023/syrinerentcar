@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 351 96% 44%;
+    --primary: 351 82% 48%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 351 40% 96%;
-    --secondary-foreground: 351 80% 32%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 46%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 62%;
 
-    --accent: 351 40% 96%;
-    --accent-foreground: 351 80% 32%;
+    --accent: 43 74% 52%;
+    --accent-foreground: 0 0% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 351 96% 44%;
+    --border: 0 0% 18%;
+    --input: 0 0% 16%;
+    --ring: 351 82% 48%;
 
     --radius: 0.75rem;
 
-    --neon-cyan: 351 96% 44%;
-    --neon-violet: 270 60% 55%;
-    --neon-blue: 351 88% 52%;
-    --glass: 0 0% 100%;
-    --glass-border: 214 32% 88%;
+    --neon-cyan: 351 82% 48%;
+    --neon-violet: 43 74% 52%;
+    --neon-blue: 351 75% 52%;
+    --glass: 0 0% 8%;
+    --glass-border: 0 0% 20%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 222 47% 11%;
-    --sidebar-primary: 351 96% 44%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 351 82% 48%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 222 47% 11%;
-    --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 351 96% 44%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 351 82% 48%;
   }
 }
 
@@ -69,11 +69,11 @@
 
 @layer components {
   .glass {
-    @apply bg-white/85 backdrop-blur-xl border border-border shadow-sm;
+    @apply bg-card/90 backdrop-blur-xl border border-border shadow-sm;
   }
 
   .glass-strong {
-    @apply bg-white/95 backdrop-blur-2xl border border-border shadow-md;
+    @apply bg-card/95 backdrop-blur-2xl border border-border shadow-md;
   }
 
   .neon-glow {
@@ -93,15 +93,32 @@
 
   .gradient-mesh {
     background:
-      radial-gradient(ellipse at 20% 50%, hsl(var(--neon-violet) / 0.06) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, hsl(var(--neon-cyan) / 0.05) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 80%, hsl(var(--neon-blue) / 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 20% 50%, hsl(var(--neon-violet) / 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, hsl(var(--neon-cyan) / 0.07) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, hsl(var(--neon-blue) / 0.05) 0%, transparent 50%),
       hsl(var(--background));
   }
 
-  .card-3d {
-    transform-style: preserve-3d;
-    perspective: 1000px;
+  .showroom-surface {
+    @apply bg-[#0a0a0a];
+  }
+
+  .fleet-car-card {
+    @apply overflow-hidden rounded-2xl border border-slate-700/50 bg-card shadow-[0_8px_32px_-12px_rgba(0,0,0,0.55)];
+    @apply transition-all duration-300 hover:border-primary/40 hover:shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.2)];
+  }
+
+  .car-detail-page {
+    background-color: #090e1a;
+    color: hsl(210 40% 98%);
+  }
+
+  .car-detail-panel {
+    background-color: #090e1a;
+  }
+
+  .car-detail-spec {
+    @apply rounded-2xl border border-white/10 bg-[#0f1628] p-5;
   }
 
   .shimmer {

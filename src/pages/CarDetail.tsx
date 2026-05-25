@@ -71,7 +71,7 @@ const CarDetail = () => {
 
   if (!carId || !car) {
     return (
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="car-detail-page min-h-screen text-foreground">
         <SEOHead page="fleet" />
         <header>
           <Navbar variant="default" />
@@ -120,7 +120,7 @@ const CarDetail = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="car-detail-page min-h-screen text-foreground">
       <SEOHead page="fleet" overrides={seoOverrides} />
       <JsonLd schema={breadcrumbSchema(crumbs)} />
 
@@ -137,21 +137,21 @@ const CarDetail = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="relative min-h-[42vh] w-full overflow-hidden border-b border-border/60 bg-black lg:sticky lg:top-20 lg:min-h-[calc(100svh-5rem)] lg:self-start lg:border-b-0 lg:border-r"
+            className="relative min-h-[42vh] w-full overflow-hidden border-b border-white/10 bg-[#05070d] lg:sticky lg:top-20 lg:min-h-[calc(100svh-5rem)] lg:self-start lg:border-b-0 lg:border-r lg:border-white/10"
           >
             <CarImage
               src={car.image}
               alt={carImageAlt(car)}
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-contain object-center p-4 sm:p-8"
               loading="eager"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-black/25 lg:bg-gradient-to-r lg:from-transparent lg:via-black/10 lg:to-background/30"
+              className="absolute inset-0 bg-gradient-to-t from-[#090E1A]/90 via-transparent to-black/20 lg:bg-gradient-to-r lg:from-transparent lg:via-black/10 lg:to-[#090E1A]"
               aria-hidden
             />
           </motion.div>
 
-          <div className="flex flex-col px-4 py-10 lg:px-10 lg:py-16 xl:px-14">
+          <div className="car-detail-panel flex flex-col px-4 py-10 lg:px-10 lg:py-16 xl:px-14">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -198,10 +198,7 @@ const CarDetail = () => {
               <h2 className="sr-only">Caractéristiques du véhicule</h2>
               <div className="mt-10 grid gap-4 sm:grid-cols-2">
                 {specItems.map(({ icon: Icon, label, value }) => (
-                  <div
-                    key={label}
-                    className="flex items-start gap-4 rounded-2xl border border-border bg-card/50 p-5"
-                  >
+                  <div key={label} className="car-detail-spec flex items-start gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
                       <Icon className="h-5 w-5" aria-hidden />
                     </div>
@@ -212,7 +209,7 @@ const CarDetail = () => {
                   </div>
                 ))}
                 {car.registration && (
-                  <div className="flex items-start gap-4 rounded-2xl border border-border bg-card/50 p-5 sm:col-span-2">
+                  <div className="car-detail-spec flex items-start gap-4 sm:col-span-2">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
                       <CarIcon className="h-5 w-5" aria-hidden />
                     </div>

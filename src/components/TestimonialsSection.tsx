@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
   const sortedReviews = [...CLIENT_REVIEWS].sort((a, b) => b.rating - a.rating);
 
   return (
-    <section id="reviews" className="relative overflow-hidden bg-muted/30 py-20 md:py-28">
+    <section id="reviews" className="relative overflow-hidden bg-muted/40 py-20 md:py-28">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,hsl(351_96%_44%/0.08),transparent_65%)]"
         aria-hidden
@@ -64,7 +64,7 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="mx-auto mb-12 max-w-2xl text-center md:mb-14"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary shadow-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary shadow-sm">
             <MessageSquareQuote className="h-3.5 w-3.5" />
             Google Reviews
           </span>
@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-2xl border border-border bg-white p-6 shadow-[0_8px_30px_-12px_rgba(15,23,42,0.12)] md:p-8 lg:sticky lg:top-28"
+            className="relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.45)] md:p-8 lg:sticky lg:top-28"
           >
             <motion.div
               className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/10 blur-2xl"
@@ -89,7 +89,7 @@ const TestimonialsSection = () => {
             />
             <div className="relative">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-border">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-background shadow-sm ring-1 ring-border">
                   <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden>
                     <path
                       fill="#4285F4"
@@ -167,7 +167,7 @@ const TestimonialsSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 className={cn(
-                  "group relative flex flex-col rounded-2xl border border-border bg-white p-5 shadow-sm transition duration-300",
+                  "group relative flex flex-col rounded-2xl border border-border bg-card p-5 shadow-sm transition duration-300",
                   "hover:-translate-y-1 hover:border-primary/20 hover:shadow-[0_12px_32px_-16px_rgba(221,4,38,0.2)]",
                 )}
               >

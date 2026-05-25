@@ -87,7 +87,7 @@ const CarShowcase = ({
             categoryPillVariant === "vipFleet"
               ? activeType === type
                 ? "border border-transparent bg-primary text-primary-foreground shadow-[0_0_22px_hsl(351_96%_44%/0.25)]"
-                : "border border-border bg-white text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                : "border border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
               : activeType === type
                 ? "bg-primary text-primary-foreground neon-glow"
                 : "border border-border bg-muted/20 text-muted-foreground hover:border-primary/40 hover:text-foreground",

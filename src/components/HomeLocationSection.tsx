@@ -45,7 +45,7 @@ export function HomeLocationSection() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-[0_8px_30px_-12px_rgba(15,23,42,0.12)]"
+            className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[0_8px_30px_-12px_rgba(0,0,0,0.45)]"
           >
             <div className="relative h-44 overflow-hidden sm:h-52">
               <img
@@ -115,7 +115,7 @@ export function HomeLocationSection() {
                   href={CONTACT_INFO.mapsQuery}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl border border-border bg-white px-4 py-3 text-sm font-semibold text-foreground transition hover:border-primary/30 hover:text-primary"
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 py-3 text-sm font-semibold text-foreground transition hover:border-primary/30 hover:text-primary"
                 >
                   Google Maps
                   <ExternalLink className="h-4 w-4" />
