@@ -1,3 +1,4 @@
+import type { Car } from "@/data/cars";
 import { SITE } from "@/seo/seoConfig";
 
 export const localBusinessSchema = {
@@ -29,7 +30,14 @@ export const localBusinessSchema = {
   },
   areaServed: [
     { "@type": "City", name: "M'saken" },
-    { "@type": "AdministrativeArea", name: "Sousse" },
+    { "@type": "City", name: "Sousse" },
+    { "@type": "City", name: "Monastir" },
+    { "@type": "City", name: "Tunis" },
+    { "@type": "City", name: "Hammamet" },
+    { "@type": "City", name: "Mahdia" },
+    { "@type": "City", name: "Djerba" },
+    { "@type": "City", name: "Sfax" },
+    { "@type": "AdministrativeArea", name: "Sousse Governorate" },
     { "@type": "Country", name: "Tunisia" },
   ],
   openingHoursSpecification: [
@@ -45,6 +53,64 @@ export const localBusinessSchema = {
     "https://www.instagram.com/syrine_rent_car/",
   ],
 } as const;
+
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE.url}/#organization`,
+  name: SITE.name,
+  legalName: SITE.legalName,
+  url: SITE.url,
+  logo: `${SITE.url}/syrine-logo-navbar.png`,
+  image: SITE.ogImage,
+  telephone: SITE.phone,
+  email: SITE.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: SITE.address.street,
+    addressLocality: SITE.address.locality,
+    addressRegion: SITE.address.region,
+    postalCode: SITE.address.postalCode,
+    addressCountry: SITE.address.countryCode,
+  },
+  sameAs: [
+    "https://www.facebook.com/SyrineRentCar/",
+    "https://www.instagram.com/syrine_rent_car/",
+  ],
+} as const;
+
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE.url}/#website`,
+  url: SITE.url,
+  name: SITE.name,
+  description:
+    "Car rental in Tunisia — affordable vehicles in M'saken, Sousse, Tunis and nationwide. Book online or via WhatsApp.",
+  publisher: { "@id": `${SITE.url}/#organization` },
+  inLanguage: ["fr", "en", "ar"],
+} as const;
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+/** JSON-LD FAQPage for rich results. */
+export function faqPageSchema(items: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
 
 export interface BreadcrumbCrumb {
   name: string;
@@ -62,5 +128,35 @@ export function breadcrumbSchema(crumbs: BreadcrumbCrumb[]) {
       name: crumb.name,
       item: crumb.path.startsWith("http") ? crumb.path : `${SITE.url}${crumb.path}`,
     })),
+  };
+}
+
+/** Vehicle listing schema for individual car detail pages. */
+export function vehicleProductSchema(car: Car, canonicalUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${car.brand} ${car.name}`,
+    description:
+      car.description ??
+      `Rent a ${car.brand} ${car.name} in Tunisia — ${car.transmission}, ${car.fuelType}, ${car.seats} seats.`,
+    image: car.image.startsWith("http") ? car.image : `${SITE.url}${car.image}`,
+    url: canonicalUrl,
+    brand: {
+      "@type": "Brand",
+      name: car.brand,
+    },
+    category: car.type,
+    offers: {
+      "@type": "Offer",
+      availability: car.available
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      priceCurrency: "TND",
+      ...(car.pricePerDay != null && car.pricePerDay > 0
+        ? { price: car.pricePerDay, priceSpecification: { "@type": "UnitPriceSpecification", unitText: "DAY" } }
+        : {}),
+      seller: { "@id": `${SITE.url}/#organization` },
+    },
   };
 }

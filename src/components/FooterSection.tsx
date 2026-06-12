@@ -36,8 +36,10 @@ export function FooterSection() {
 
   const quickLinks = [
     { labelKey: "vipFleet" as const, to: ROUTES.fleet },
+    { labelKey: "reservation" as const, to: ROUTES.reservation },
     { labelKey: "aboutUs" as const, to: ROUTES.about },
     { labelKey: "contact" as const, to: ROUTES.contact },
+    { labelKey: "faq" as const, to: `${ROUTES.home}#faq` },
   ];
 
   return (
@@ -67,15 +69,29 @@ export function FooterSection() {
                 {t("footer.quickLinks")}
               </h3>
               <nav className="flex flex-col gap-2.5" aria-label="Quick links">
-                {quickLinks.map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {t(`footer.${item.labelKey}`)}
-                  </Link>
-                ))}
+                {quickLinks.map((item) => {
+                  const isHash = item.to.includes("#");
+                  if (isHash) {
+                    return (
+                      <a
+                        key={item.to}
+                        href={item.to}
+                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {t(`footer.${item.labelKey}`)}
+                      </a>
+                    );
+                  }
+                  return (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {t(`footer.${item.labelKey}`)}
+                    </Link>
+                  );
+                })}
               </nav>
             </div>
 

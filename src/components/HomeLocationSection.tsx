@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Clock, ExternalLink, Mail, MapPin, Navigation, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import { CONTACT_INFO } from "@/lib/contactInfo";
+import { ROUTES } from "@/seo/seoConfig";
 
 const STOREFRONT_IMAGE = "/syrine-agency-storefront.png";
 
@@ -35,7 +37,15 @@ export function HomeLocationSection() {
             Notre agence à M&apos;saken
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
-            Passez nous voir au Bd Dr Taieb Hachicha — prise en charge sur place et livraison possible.
+            Passez nous voir au Bd Dr Taieb Hachicha — prise en charge sur place, livraison Sousse et{" "}
+            <Link to={ROUTES.about} className="text-primary hover:underline">
+              transfert aéroport Tunis
+            </Link>
+            .{" "}
+            <Link to={ROUTES.reservation} className="text-primary hover:underline">
+              Réservez votre voiture en ligne en Tunisie
+            </Link>
+            .
           </p>
         </motion.div>
 
@@ -50,7 +60,9 @@ export function HomeLocationSection() {
             <div className="relative h-44 overflow-hidden sm:h-52">
               <img
                 src={STOREFRONT_IMAGE}
-                alt="Façade Syrine Rent Car — agence de location M'saken"
+                alt="Façade Syrine Rent Car — agence location voiture Tunisie, M'saken Sousse"
+                width={640}
+                height={480}
                 className="h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"

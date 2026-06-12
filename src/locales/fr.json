@@ -22,8 +22,10 @@
     "tagline": "Location premium avec tarifs clairs et réservation instantanée. Noté 4,9★ — remises de véhicules professionnelles et assistance 24h/24.",
     "quickLinks": "Liens rapides",
     "vipFleet": "Flotte VIP",
+    "reservation": "Réserver en ligne",
     "aboutUs": "À propos",
     "contact": "Contact",
+    "faq": "FAQ location voiture",
     "contactTitle": "Contact",
     "followUs": "Suivez-nous",
     "open247": "Lun–Sam · 8h–18h",
@@ -123,8 +125,8 @@
     "headLine1": "Meilleure location de voitures",
     "headLine2": "à M'saken",
     "headLine3": "",
-    "seoH1": "Location de voiture à M'saken — Syrine Rent Car",
-    "description": "",
+    "seoH1": "Location de voiture en Tunisie — Syrine Rent Car",
+    "description": "Louez une voiture en Tunisie à M'saken : citadines, SUV, automatique ou manuelle. Réservation en ligne, livraison aéroport Tunis, tarifs transparents. Car rental Tunisia — affordable & hassle-free.",
     "ctaBook": "RÉSERVER",
     "ctaFleet": "VOIR LA FLOTTE",
     "stat1Val": "200+",
@@ -178,8 +180,8 @@
     "f2d": "Chaque trajet inclut une couverture complète.",
     "f3t": "Livraison 24h/24",
     "f3d": "Nous vous apportons le véhicule, où que vous soyez.",
-    "f4t": "200+ points",
-    "f4d": "Prise en charge et retour partout dans le monde.",
+    "f4t": "Couverture Tunisie",
+    "f4d": "Livraison et prise en charge à M'saken, Sousse, Tunis, Monastir, Hammamet et aéroport Tunis-Carthage.",
     "f5t": "Flotte premium",
     "f5d": "Véhicules sélectionnés et entretenus avec soin.",
     "f6t": "Conciergerie",
@@ -256,7 +258,49 @@
   "contact": {
     "label": "Contact",
     "title": "Planifions votre trajet",
-    "subtitle": "Contactez-nous comme vous voulez — ou réservez un appel de 30 minutes. Nous sommes là 24h/24 pour les retraits, les changements et les demandes VIP."
+    "subtitle": "Contactez-nous pour une location en Tunisie — agence M'saken, livraison Sousse ou airport pickup Tunis. Lun–sam 8h–18h, WhatsApp pour les urgences."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions fréquentes — location voiture Tunisie",
+    "subtitle": "Tout ce qu'il faut savoir pour louer une voiture en Tunisie avec Syrine Rent Car.",
+    "items": [
+      {
+        "q": "Comment réserver une voiture en Tunisie avec Syrine Rent Car ?",
+        "a": "Parcourez notre flotte en ligne, complétez le formulaire de réservation ou envoyez un message WhatsApp. Nous confirmons rapidement les dates, le lieu de prise en charge et le modèle — book a car online Tunisia en quelques minutes."
+      },
+      {
+        "q": "Proposez-vous la location de voiture à l'aéroport de Tunis ?",
+        "a": "Oui — car rental Tunis Airport et Tunisia airport pickup disponibles. Nous organisons la remise des clés à l'aéroport Tunis-Carthage (TUN) ou en gare. Idéal pour cheap airport car rental in Tunisia."
+      },
+      {
+        "q": "Quelles villes couvrez-vous en Tunisie ?",
+        "a": "Notre agence est à M'saken, près de Sousse. Nous desservons Tunis, Sousse, Monastir, Hammamet, Mahdia, Djerba et Sfax pour la livraison et les transferts."
+      },
+      {
+        "q": "Quels types de véhicules sont disponibles ?",
+        "a": "Citadines économiques, compactes automatiques, crossovers familiaux et SUV — economy, automatic, family et SUV rental Tunisia. Renault Clio, Kia Picanto, Hyundai i20, Dacia Sandero, Fiat Panda 4x4, Mahindra XUV300."
+      },
+      {
+        "q": "Proposez-vous la location longue durée ou mensuelle ?",
+        "a": "Oui — monthly car rental Tunisia et business car rental Tunisia pour particuliers et professionnels. Contactez-nous pour un devis long term vehicle rental Tunisia."
+      },
+      {
+        "q": "Faut-il un dépôt pour louer une voiture ?",
+        "a": "Les conditions varient selon le véhicule. Demandez nos options no deposit car rental Tunisia lors de votre réservation — rent a car in Tunisia without hassle."
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "Explorer Syrine Rent Car",
+    "navLabel": "Liens internes location voiture Tunisie",
+    "items": [
+      { "href": "fleet", "label": "Parcourir nos voitures de location en Tunisie" },
+      { "href": "reservation", "label": "Réserver une voiture en ligne en Tunisie" },
+      { "href": "about", "label": "Notre agence de location à M'saken, Sousse" },
+      { "href": "contact", "label": "Contact — livraison aéroport Tunis" },
+      { "href": "faq", "label": "FAQ location voiture Tunisie" }
+    ]
   },
   "adminLogin": {
     "title": "Syrine Rent a Car Admin",

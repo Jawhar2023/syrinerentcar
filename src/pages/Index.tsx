@@ -9,8 +9,10 @@ import FooterSection from "@/components/FooterSection";
 import { useMergedFleetCars } from "@/hooks/useDrivexData";
 import { SEOHead } from "@/seo/SEOHead";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbSchema } from "@/seo/schemas";
-import { ROUTES } from "@/seo/seoConfig";
+import { FaqSection } from "@/components/FaqSection";
+import { InternalLinksSection } from "@/components/InternalLinksSection";
+import { breadcrumbSchema, faqPageSchema } from "@/seo/schemas";
+import { FAQ_ITEMS_FR, ROUTES } from "@/seo/seoConfig";
 
 const Index = () => {
   const fleet = useMergedFleetCars();
@@ -19,6 +21,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEOHead page="home" />
       <JsonLd schema={breadcrumbSchema([{ name: "Accueil", path: ROUTES.home }])} />
+      <JsonLd schema={faqPageSchema(FAQ_ITEMS_FR)} />
 
       <header>
         <Navbar variant="default" />
@@ -56,6 +59,9 @@ const Index = () => {
           </h2>
           <FeaturesSection />
         </section>
+
+        <FaqSection />
+        <InternalLinksSection />
       </main>
 
       <footer>

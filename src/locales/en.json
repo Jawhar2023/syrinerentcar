@@ -22,8 +22,10 @@
     "tagline": "Premium car rental with clear pricing and instant booking. Rated 4.9★ — professional handovers and support around the clock.",
     "quickLinks": "Quick Links",
     "vipFleet": "VIP Fleet",
+    "reservation": "Book online",
     "aboutUs": "About Us",
     "contact": "Contact",
+    "faq": "Car rental FAQ",
     "contactTitle": "Contact",
     "followUs": "Follow Us",
     "open247": "Mon–Sat · 8am–6pm",
@@ -123,8 +125,8 @@
     "headLine1": "Best Car Rental",
     "headLine2": "in M'saken",
     "headLine3": "",
-    "seoH1": "Car Rental in M'saken — Syrine Rent Car",
-    "description": "",
+    "seoH1": "Car Rental in Tunisia — Syrine Rent Car",
+    "description": "Rent a car in Tunisia from M'saken: economy, SUV, automatic or manual. Book online, Tunis Airport delivery, transparent rates. Affordable car rental Tunisia — hassle-free.",
     "ctaBook": "BOOK YOUR RIDE",
     "ctaFleet": "VIEW FLEET",
     "stat1Val": "200+",
@@ -178,8 +180,8 @@
     "f2d": "Every ride includes comprehensive coverage.",
     "f3t": "24/7 Delivery",
     "f3d": "We bring the car to you, any time, anywhere.",
-    "f4t": "200+ Locations",
-    "f4d": "Pick up and drop off across the globe.",
+    "f4t": "Tunisia coverage",
+    "f4d": "Delivery and pick-up in M'saken, Sousse, Tunis, Monastir, Hammamet and Tunis-Carthage Airport.",
     "f5t": "Premium Fleet",
     "f5d": "Only hand-picked, meticulously maintained vehicles.",
     "f6t": "Concierge Support",
@@ -256,7 +258,49 @@
   "contact": {
     "label": "Contact",
     "title": "Let's plan your drive",
-    "subtitle": "Reach us any way you like—or lock in a 30-minute call. We're here 24/7 for pickups, changes, and VIP requests."
+    "subtitle": "Contact us for car rental in Tunisia — M'saken agency, Sousse delivery or Tunis Airport pickup. Mon–Sat 8am–6pm, WhatsApp for urgent requests."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently asked questions — car rental Tunisia",
+    "subtitle": "Everything you need to know to rent a car in Tunisia with Syrine Rent Car.",
+    "items": [
+      {
+        "q": "How do I book a car in Tunisia with Syrine Rent Car?",
+        "a": "Browse our fleet online, complete the reservation form or message us on WhatsApp. We confirm dates, pick-up location and vehicle quickly — book a car online Tunisia in minutes."
+      },
+      {
+        "q": "Do you offer car rental at Tunis Airport?",
+        "a": "Yes — car rental Tunis Airport and Tunisia airport pickup available. We arrange key handover at Tunis-Carthage (TUN) or train stations. Ideal for cheap airport car rental in Tunisia."
+      },
+      {
+        "q": "Which cities in Tunisia do you cover?",
+        "a": "Our agency is in M'saken near Sousse. We serve Tunis, Sousse, Monastir, Hammamet, Mahdia, Djerba and Sfax for delivery and transfers."
+      },
+      {
+        "q": "What types of vehicles are available?",
+        "a": "Economy city cars, automatic compacts, family crossovers and SUVs — economy, automatic, family and SUV rental Tunisia. Renault Clio, Kia Picanto, Hyundai i20, Dacia Sandero, Fiat Panda 4x4, Mahindra XUV300."
+      },
+      {
+        "q": "Do you offer long-term or monthly rental?",
+        "a": "Yes — monthly car rental Tunisia and business car rental Tunisia for individuals and companies. Contact us for long term vehicle rental Tunisia quotes."
+      },
+      {
+        "q": "Is a deposit required to rent a car?",
+        "a": "Terms vary by vehicle. Ask about no deposit car rental Tunisia when booking — rent a car in Tunisia without hassle."
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "Explore Syrine Rent Car",
+    "navLabel": "Internal links car rental Tunisia",
+    "items": [
+      { "href": "fleet", "label": "Browse our rental cars in Tunisia" },
+      { "href": "reservation", "label": "Book a car online in Tunisia" },
+      { "href": "about", "label": "Our car rental agency in M'saken, Sousse" },
+      { "href": "contact", "label": "Contact — Tunis Airport delivery" },
+      { "href": "faq", "label": "Car rental Tunisia FAQ" }
+    ]
   },
   "adminLogin": {
     "title": "Syrine Rent a Car Admin",

@@ -33,6 +33,15 @@ export default defineConfig({
           if (id.includes("node_modules/react-helmet-async")) {
             return "helmet";
           }
+          if (id.includes("node_modules/framer-motion")) {
+            return "motion";
+          }
+          if (id.includes("node_modules/recharts") || id.includes("node_modules/d3-")) {
+            return "charts";
+          }
+          if (id.includes("node_modules/xlsx")) {
+            return "xlsx";
+          }
           if (
             id.includes("node_modules/react/") ||
             id.includes("node_modules/react-dom/") ||

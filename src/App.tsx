@@ -11,7 +11,7 @@ import DriveXIntro from "@/components/DriveXIntro";
 import { IntroGateProvider } from "@/contexts/IntroGateContext";
 import { PageLoader } from "@/components/PageLoader";
 import { JsonLd } from "@/seo/JsonLd";
-import { localBusinessSchema } from "@/seo/schemas";
+import { localBusinessSchema, organizationSchema, websiteSchema } from "@/seo/schemas";
 import { LegacyCarRedirect } from "@/components/LegacyRedirects";
 import { ROUTES } from "@/seo/seoConfig";
 
@@ -32,6 +32,8 @@ const App = () => (
       <IntroGateProvider>
         <TooltipProvider>
           <JsonLd schema={localBusinessSchema} />
+          <JsonLd schema={organizationSchema} />
+          <JsonLd schema={websiteSchema} />
           <Toaster />
           <Sonner />
           <BrowserRouter>

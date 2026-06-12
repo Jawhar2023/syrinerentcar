@@ -20,7 +20,8 @@ import { Button } from "@/components/ui/button";
 import { useMergedFleetCars } from "@/hooks/useDrivexData";
 import { filterCarsByQuizAnswers, type VipQuizAnswers } from "@/lib/vipFleetQuizLogic";
 import { cn } from "@/lib/utils";
-import { ROUTES } from "@/seo/seoConfig";
+import { SEOHead } from "@/seo/SEOHead";
+import { ROUTES, SITE } from "@/seo/seoConfig";
 
 /** English copy (DriveX VIP). */
 const COPY = {
@@ -144,7 +145,17 @@ export default function VipFindCarQuizPage() {
   const totalSteps = STEPS.length;
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#eef1f4] text-slate-900">
+    <>
+      <SEOHead
+        page="fleet"
+        noindex
+        overrides={{
+          title: "Trouver votre voiture — Syrine Rent Car",
+          description: "Quiz interactif pour trouver le véhicule idéal dans notre flotte de location en Tunisie.",
+          canonical: `${SITE.url}${ROUTES.fleet}`,
+        }}
+      />
+      <main className="relative min-h-screen overflow-hidden bg-[#eef1f4] text-slate-900">
       <div className="relative z-10 mx-auto flex min-h-screen max-w-lg flex-col px-4 pb-16 pt-24 sm:max-w-xl sm:px-6 sm:pt-28">
         <header className="mb-8 flex items-center justify-between gap-4">
           <Link
@@ -330,5 +341,6 @@ export default function VipFindCarQuizPage() {
         </AnimatePresence>
       </div>
     </main>
+    </>
   );
 }

@@ -36,8 +36,8 @@ const Reservation = () => {
               {PAGES.reservation.h1}
             </h1>
             <p className="mt-4 max-w-2xl text-muted-foreground md:text-lg">
-              Complétez le formulaire ci-dessous pour envoyer votre demande de location par WhatsApp. Notre
-              équipe à M&apos;saken vous répond rapidement.
+              Complétez le formulaire pour réserver votre location de voiture en Tunisie par WhatsApp — M&apos;saken,
+              Sousse, aéroport Tunis ou livraison sur place. Confirmation rapide, tarifs transparents.
             </p>
           </div>
         </section>

@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
+import { SEOHead } from "@/seo/SEOHead";
+import { ROUTES, SITE } from "@/seo/seoConfig";
 
 const NotFound = () => {
   const location = useLocation();
@@ -14,12 +16,21 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
+      <SEOHead
+        page="home"
+        noindex
+        overrides={{
+          title: "Page introuvable — Syrine Rent Car",
+          description: "Cette page n'existe pas. Retournez à l'accueil pour louer une voiture en Tunisie.",
+          canonical: `${SITE.url}/`,
+        }}
+      />
       <Navbar variant="default" />
       <div className="flex flex-1 flex-col items-center justify-center px-4 pt-20 pb-12">
         <div className="text-center">
           <h1 className="mb-4 text-4xl font-bold">{t("notFound.title")}</h1>
           <p className="mb-4 text-xl text-muted-foreground">{t("notFound.message")}</p>
-          <Link to="/" className="text-primary underline hover:text-primary/90">
+          <Link to={ROUTES.home} className="text-primary underline hover:text-primary/90">
             {t("notFound.backHome")}
           </Link>
         </div>

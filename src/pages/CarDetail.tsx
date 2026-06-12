@@ -23,7 +23,7 @@ import { cn } from "@/lib/utils";
 import { SEOHead } from "@/seo/SEOHead";
 import { JsonLd } from "@/seo/JsonLd";
 import { BreadCrumb } from "@/seo/BreadCrumb";
-import { breadcrumbSchema } from "@/seo/schemas";
+import { breadcrumbSchema, vehicleProductSchema } from "@/seo/schemas";
 import { ROUTES, SITE } from "@/seo/seoConfig";
 
 const CarDetail = () => {
@@ -51,16 +51,16 @@ const CarDetail = () => {
 
   const seoOverrides = useMemo(() => {
     if (!car) return undefined;
-    const title = `Location ${car.brand} ${car.name} M'saken | Syrine Rent Car`;
+    const title = `Location ${car.brand} ${car.name} Tunisie | Car Rental Tunisia — Syrine`;
     const description =
       car.description ??
-      `Louez ${car.brand} ${car.name} (${car.transmission}, ${car.fuelType}) à M'saken avec Syrine Rent Car. Réservez par WhatsApp.`;
+      `Louez ${car.brand} ${car.name} en Tunisie (${car.transmission}, ${car.fuelType}, ${car.seats} places). Réservation en ligne, livraison M'saken, Sousse ou aéroport Tunis. Rent a car Tunisia — book via WhatsApp.`;
     return {
       title,
       description,
-      keywords: `location ${car.brand} ${car.name} M'saken, louer ${car.name} Sousse, ${car.transmission} ${car.type}`,
+      keywords: `location ${car.brand} ${car.name} Tunisie, rent ${car.name} Tunisia, ${car.type} rental Tunisia, ${car.transmission} car rental Tunisia, louer ${car.name} Sousse`,
       canonical: `${SITE.url}${ROUTES.fleetCar(car.id)}`,
-      h1: `Location ${car.brand} ${car.name} à M'saken`,
+      h1: `Location ${car.brand} ${car.name} en Tunisie`,
     };
   }, [car]);
 
@@ -123,6 +123,7 @@ const CarDetail = () => {
     <div className="car-detail-page min-h-screen text-foreground">
       <SEOHead page="fleet" overrides={seoOverrides} />
       <JsonLd schema={breadcrumbSchema(crumbs)} />
+      <JsonLd schema={vehicleProductSchema(car, `${SITE.url}${ROUTES.fleetCar(car.id)}`)} />
 
       <header>
         <Navbar variant="default" />
