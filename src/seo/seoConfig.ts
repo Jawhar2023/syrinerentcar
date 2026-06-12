@@ -6,8 +6,8 @@ export const SITE = {
   url: "https://www.syrinerentcar.com",
   locale: "fr_TN",
   language: "fr",
-  phone: "+21626275645",
-  phoneDisplay: "+216 26 275 645",
+  phone: "+21626275640",
+  phoneDisplay: "+216 26 275 640",
   fax: "+21673313126",
   email: "syrinerentcar@gmail.com",
   address: {
@@ -91,7 +91,7 @@ export const PAGES: Record<PageSeoKey, PageSeo> = {
     h1: "Réserver votre voiture de location en Tunisie",
   },
   contact: {
-    title: "Contact — Syrine Rent Car Tunisie | Tél. +216 26 275 645",
+    title: "Contact — Syrine Rent Car Tunisie | Tél. +216 26 275 640",
     description:
       "Contactez Syrine Rent Car pour une location en Tunisie : Bd Dr Taieb Hachicha, M'saken 4070. Téléphone, WhatsApp, email, plan d'accès. Lun–sam 8h–18h. Airport pickup & delivery available.",
     keywords:

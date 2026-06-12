@@ -19,7 +19,6 @@ const HeroSection = () => {
   const isArabic = i18n.language?.startsWith("ar") ?? false;
 
   const stats = [
-    { val: t("hero.stat1Val"), label: t("hero.stat1Label") },
     { val: t("hero.stat2Val"), label: t("hero.stat2Label") },
     { val: t("hero.stat3Val"), label: t("hero.stat3Label") },
     { val: t("hero.stat4Val"), label: t("hero.stat4Label") },

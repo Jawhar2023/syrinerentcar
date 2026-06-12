@@ -1,8 +1,8 @@
 /** Shared contact & social URLs — update here for footer, contact page, speed dial */
 export const CONTACT_INFO = {
   brandName: "Syrine Rent a Car",
-  phoneDisplay: "26 275 645",
-  phoneTel: "+21626275645",
+  phoneDisplay: "26 275 640",
+  phoneTel: "+21626275640",
   faxDisplay: "73 313 126",
   faxTel: "+21673313126",
   email: "syrinerentcar@gmail.com",
@@ -18,6 +18,6 @@ export const CONTACT_INFO = {
   facebookLabel: "Syrine Rent Car",
   instagram: "https://www.instagram.com/syrine_rent_car/?hl=fr",
   instagramLabel: "@syrine_rent_car",
-  whatsapp: "https://wa.me/21626275645",
+  whatsapp: "https://wa.me/21626275640",
   calendlyUrl: "https://calendly.com/syrinerentcar/30min",
 } as const;
