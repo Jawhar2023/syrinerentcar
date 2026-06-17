@@ -22,6 +22,8 @@ const About = lazyWithRetry(() => import("./pages/About.tsx"));
 const Contact = lazyWithRetry(() => import("./pages/Contact.tsx"));
 const Reservation = lazyWithRetry(() => import("./pages/Reservation.tsx"));
 const CarDetail = lazyWithRetry(() => import("./pages/CarDetail.tsx"));
+const LocationCityPage = lazyWithRetry(() => import("./pages/LocationCityPage.tsx"));
+const LocationsHubPage = lazyWithRetry(() => import("./pages/LocationsHubPage.tsx"));
 const NotFound = lazyWithRetry(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -49,7 +51,8 @@ const App = () => (
                 <Route path={ROUTES.reservation} element={<Reservation />} />
                 <Route path={ROUTES.contact} element={<Contact />} />
 
-                {/* Legacy URLs → SEO-friendly redirects */}
+                <Route path={ROUTES.locationsHub} element={<LocationsHubPage />} />
+                <Route path="/location-voiture-:citySlug" element={<LocationCityPage />} />
                 <Route path="/about" element={<Navigate to={ROUTES.about} replace />} />
                 <Route path="/vip-fleet" element={<Navigate to={ROUTES.fleet} replace />} />
                 <Route path="/vip-fleet/car/:carId" element={<LegacyCarRedirect />} />

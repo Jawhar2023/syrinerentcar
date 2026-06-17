@@ -41,6 +41,8 @@ export const ROUTES = {
   fleetCar: (carId: string) => `/notre-flotte/voiture/${encodeURIComponent(carId)}`,
   reservation: "/reservation",
   contact: "/contact",
+  locationsHub: "/location-voiture-tunisie",
+  locationCity: (slug: string) => `/location-voiture-${slug}`,
 } as const;
 
 export type PageSeoKey = "home" | "about" | "fleet" | "reservation" | "contact";
@@ -55,20 +57,20 @@ export interface PageSeo {
 
 export const PAGES: Record<PageSeoKey, PageSeo> = {
   home: {
-    title: "Location voiture Tunisie & M'saken | Car Rental Tunisia — Syrine Rent Car",
+    title: "Location voiture M'saken & Sousse | Tunisie — Syrine Rent Car",
     description:
-      "Louez une voiture en Tunisie avec Syrine Rent Car : citadines, SUV, automatique ou manuelle à M'saken et Sousse. Réservation en ligne, livraison aéroport Tunis, tarifs transparents. Car rental Tunisia — book online.",
+      "Location voiture à M'saken, Sousse et partout en Tunisie. Syrine Rent Car : citadines, SUV, automatique. Agence Bd Dr Taieb Hachicha — livraison Monastir, Tunis, Hammamet, Djerba. Réservez par WhatsApp.",
     keywords:
-      "location voiture Tunisie, car rental Tunisia, rent a car Tunisia, Tunisia car hire, cheap car rental Tunisia, airport car rental Tunisia, car rental Tunis, car rental Sousse, SUV rental Tunisia, economy car rental Tunisia, automatic car rental Tunisia, book a car online Tunisia, louer voiture M'saken",
+      "location voiture M'saken, location voiture Msaken, location voiture Sousse, location voiture Monastir, location voiture Tunisie, louer voiture M'saken, car rental Tunisia, rent a car Sousse, louer voiture Sousse",
     canonical: `${SITE.url}/`,
-    h1: "Location de voiture en Tunisie — Syrine Rent Car, M'saken",
+    h1: "Location de voiture à M'saken, Sousse et en Tunisie",
   },
   about: {
-    title: "Agence location voiture M'saken & Tunisie | Syrine Rent Car",
+    title: "Location voiture M'saken — Agence Syrine Rent Car | Sousse",
     description:
-      "Syrine Rent Car : agence de location de voitures au Bd Dr Taieb Hachicha, M'saken (4070). Service local, transfert aéroport Tunis, livraison Sousse, Monastir, Hammamet. Best car rental company in Tunisia.",
+      "Agence de location de voitures à M'saken (4070), Bd Dr Taieb Hachicha. Location voiture M'saken et Sousse : livraison locale, aéroport Tunis, Monastir, Hammamet. WhatsApp et réservation en ligne.",
     keywords:
-      "agence location voiture M'saken, car rental Tunis, car rental Sousse, airport transfer Tunisia, Tunisia airport pickup, business car rental Tunisia, long term car rental Tunisia, monthly car rental Tunisia",
+      "location voiture M'saken, location voiture Msaken, agence location voiture M'saken, louer voiture M'saken, location voiture Sousse, location auto M'saken 4070, Syrine Rent Car",
     canonical: `${SITE.url}/location-voiture-msaken`,
     h1: "Agence de location de voiture en Tunisie — M'saken, Sousse",
   },

@@ -1,8 +1,8 @@
 /**
- * Generates public/sitemap.xml from static routes + fleet car IDs.
+ * Generates public/sitemap.xml from static routes + fleet car IDs + location pages.
  * Run: node scripts/generate-sitemap.mjs
  */
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -12,15 +12,17 @@ const root = join(__dirname, "..");
 const SITE_URL = "https://www.syrinerentcar.com";
 const today = new Date().toISOString().slice(0, 10);
 
+const locations = JSON.parse(readFileSync(join(root, "src", "seo", "locations.json"), "utf8"));
+
 const staticRoutes = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
-  { path: "/location-voiture-msaken", priority: "0.9", changefreq: "monthly" },
+  { path: "/location-voiture-msaken", priority: "0.95", changefreq: "monthly" },
+  { path: "/location-voiture-tunisie", priority: "0.95", changefreq: "weekly" },
   { path: "/notre-flotte", priority: "0.95", changefreq: "weekly" },
   { path: "/reservation", priority: "0.9", changefreq: "monthly" },
   { path: "/contact", priority: "0.85", changefreq: "monthly" },
 ];
 
-/** Car IDs from src/data/cars.ts — keep in sync when fleet changes. */
 const carIds = [
   "renault-clio",
   "kia-picanto",
@@ -31,8 +33,15 @@ const carIds = [
   "mahindra-xuv300",
 ];
 
+const locationRoutes = locations.map((loc) => ({
+  path: `/location-voiture-${loc.slug}`,
+  priority: ["sousse", "monastir", "tunis", "hammamet", "djerba", "sfax"].includes(loc.slug) ? "0.9" : "0.85",
+  changefreq: "monthly",
+}));
+
 const urls = [
   ...staticRoutes.map((r) => ({ loc: `${SITE_URL}${r.path}`, ...r })),
+  ...locationRoutes.map((r) => ({ loc: `${SITE_URL}${r.path}`, ...r })),
   ...carIds.map((id) => ({
     loc: `${SITE_URL}/notre-flotte/voiture/${id}`,
     priority: "0.8",

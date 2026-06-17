@@ -1,0 +1,290 @@
+[
+  {
+    "slug": "sousse",
+    "name": "Sousse",
+    "governorate": "Sousse",
+    "region": "Sahel",
+    "deliveryNote": "Livraison et reprise à Sousse ville, médina et zones hôtelières — départ agence M'saken en ~15 minutes.",
+    "highlights": ["médina UNESCO", "port et corniche", "zones touristiques"],
+    "keywordExtras": "location voiture Sousse, louer voiture Sousse, car rental Sousse Tunisia"
+  },
+  {
+    "slug": "monastir",
+    "name": "Monastir",
+    "governorate": "Monastir",
+    "region": "Sahel",
+    "deliveryNote": "Prise en charge à Monastir, Méstir, Skanès et aéroport Monastir-Habib Bourguiba (MIR).",
+    "highlights": ["ribat de Monastir", "aéroport MIR", "zones côtières"],
+    "keywordExtras": "location voiture Monastir, location voiture Méstir, location voiture Mestir, louer voiture Monastir"
+  },
+  {
+    "slug": "mahdia",
+    "name": "Mahdia",
+    "governorate": "Mahdia",
+    "region": "Sahel",
+    "deliveryNote": "Livraison à Mahdia centre, zone touristique et port de pêche.",
+    "highlights": ["plages", "médina", "circuit Sahel"],
+    "keywordExtras": "location voiture Mahdia, louer voiture Mahdia"
+  },
+  {
+    "slug": "enfidha",
+    "name": "Enfidha",
+    "governorate": "Sousse",
+    "region": "Sahel",
+    "deliveryNote": "Livraison Enfidha et aéroport Enfidha-Hammamet (NBE) sur demande.",
+    "highlights": ["aéroport NBE", "axe Tunis–Sousse"],
+    "keywordExtras": "location voiture Enfidha, location voiture aéroport Enfidha"
+  },
+  {
+    "slug": "port-el-kantaoui",
+    "name": "Port El Kantaoui",
+    "governorate": "Sousse",
+    "region": "Sahel",
+    "deliveryNote": "Dépose et récupération au port de plaisance et hôtels de la zone Kantaoui.",
+    "highlights": ["marina", "golf", "tourisme balnéaire"],
+    "keywordExtras": "location voiture Port El Kantaoui, louer voiture Kantaoui"
+  },
+  {
+    "slug": "tunis",
+    "name": "Tunis",
+    "governorate": "Tunis",
+    "region": "Grand Tunis",
+    "deliveryNote": "Livraison à Tunis centre, Lac, Berges du Lac et aéroport Tunis-Carthage (TUN).",
+    "highlights": ["médina", "aéroport TUN", "affaires et tourisme"],
+    "keywordExtras": "location voiture Tunis, car rental Tunis Tunisia, louer voiture Tunis"
+  },
+  {
+    "slug": "ariana",
+    "name": "Ariana",
+    "governorate": "Ariana",
+    "region": "Grand Tunis",
+    "deliveryNote": "Prise en charge Ariana, Raoued et zones nord de Tunis.",
+    "highlights": ["Grand Tunis", "zones résidentielles"],
+    "keywordExtras": "location voiture Ariana, louer voiture Ariana"
+  },
+  {
+    "slug": "ben-arous",
+    "name": "Ben Arous",
+    "governorate": "Ben Arous",
+    "region": "Grand Tunis",
+    "deliveryNote": "Livraison Ben Arous, Mégrine, Radès et sud de Tunis.",
+    "highlights": ["zones industrielles", "accès autoroute"],
+    "keywordExtras": "location voiture Ben Arous, louer voiture Radès"
+  },
+  {
+    "slug": "manouba",
+    "name": "Manouba",
+    "governorate": "Manouba",
+    "region": "Grand Tunis",
+    "deliveryNote": "Livraison Manouba et ouest du Grand Tunis.",
+    "highlights": ["axe vers Béja", "proche Tunis"],
+    "keywordExtras": "location voiture Manouba"
+  },
+  {
+    "slug": "hammamet",
+    "name": "Hammamet",
+    "governorate": "Nabeul",
+    "region": "Cap Bon",
+    "deliveryNote": "Livraison Hammamet centre, zone hôtelière et Yasmine Hammamet.",
+    "highlights": ["plages", "médina", "tourisme"],
+    "keywordExtras": "location voiture Hammamet, car rental Hammamet Tunisia"
+  },
+  {
+    "slug": "yasmine-hammamet",
+    "name": "Yasmine Hammamet",
+    "governorate": "Nabeul",
+    "region": "Cap Bon",
+    "deliveryNote": "Dépose directe dans les hôtels et résidences de Yasmine Hammamet.",
+    "highlights": ["zone touristique", "marina", "familles"],
+    "keywordExtras": "location voiture Yasmine Hammamet"
+  },
+  {
+    "slug": "nabeul",
+    "name": "Nabeul",
+    "governorate": "Nabeul",
+    "region": "Cap Bon",
+    "deliveryNote": "Livraison Nabeul et artisanat du Cap Bon.",
+    "highlights": ["céramique", "Cap Bon"],
+    "keywordExtras": "location voiture Nabeul, louer voiture Cap Bon"
+  },
+  {
+    "slug": "kelibia",
+    "name": "Kélibia",
+    "governorate": "Nabeul",
+    "region": "Cap Bon",
+    "deliveryNote": "Prise en charge Kélibia, fort et côte nord-est.",
+    "highlights": ["fort de Kélibia", "plages"],
+    "keywordExtras": "location voiture Kélibia"
+  },
+  {
+    "slug": "bizerte",
+    "name": "Bizerte",
+    "governorate": "Bizerte",
+    "region": "Nord",
+    "deliveryNote": "Livraison Bizerte ville et zones lac de Bizerte.",
+    "highlights": ["port", "nord de la Tunisie"],
+    "keywordExtras": "location voiture Bizerte, louer voiture Bizerte"
+  },
+  {
+    "slug": "tabarka",
+    "name": "Tabarka",
+    "governorate": "Jendouba",
+    "region": "Nord-Ouest",
+    "deliveryNote": "Livraison Tabarka et corniche — idéal circuit nord-ouest.",
+    "highlights": ["plages", "forêt", "tourisme nature"],
+    "keywordExtras": "location voiture Tabarka"
+  },
+  {
+    "slug": "jendouba",
+    "name": "Jendouba",
+    "governorate": "Jendouba",
+    "region": "Nord-Ouest",
+    "deliveryNote": "Prise en charge Jendouba et environs.",
+    "highlights": ["nord-ouest", "Dougga accessible"],
+    "keywordExtras": "location voiture Jendouba"
+  },
+  {
+    "slug": "beja",
+    "name": "Béja",
+    "governorate": "Béja",
+    "region": "Nord-Ouest",
+    "deliveryNote": "Livraison Béja et nord-ouest tunisien.",
+    "highlights": ["axe vers Tabarka"],
+    "keywordExtras": "location voiture Béja, location voiture Beja"
+  },
+  {
+    "slug": "le-kef",
+    "name": "Le Kef",
+    "governorate": "Le Kef",
+    "region": "Nord-Ouest",
+    "deliveryNote": "Livraison Le Kef sur réservation.",
+    "highlights": ["hauts plateaux", "patrimoine"],
+    "keywordExtras": "location voiture Le Kef"
+  },
+  {
+    "slug": "siliana",
+    "name": "Siliana",
+    "governorate": "Siliana",
+    "region": "Nord-Ouest",
+    "deliveryNote": "Prise en charge Siliana et région.",
+    "highlights": ["intérieur nord"],
+    "keywordExtras": "location voiture Siliana"
+  },
+  {
+    "slug": "zaghouan",
+    "name": "Zaghouan",
+    "governorate": "Zaghouan",
+    "region": "Nord-Est",
+    "deliveryNote": "Livraison Zaghouan et montagnes environnantes.",
+    "highlights": ["sources", "Tunis proche"],
+    "keywordExtras": "location voiture Zaghouan"
+  },
+  {
+    "slug": "kairouan",
+    "name": "Kairouan",
+    "governorate": "Kairouan",
+    "region": "Centre",
+    "deliveryNote": "Livraison Kairouan — ville sainte et circuits centre Tunisie.",
+    "highlights": ["médina", "patrimoine UNESCO"],
+    "keywordExtras": "location voiture Kairouan, louer voiture Kairouan"
+  },
+  {
+    "slug": "sfax",
+    "name": "Sfax",
+    "governorate": "Sfax",
+    "region": "Sud-Est",
+    "deliveryNote": "Livraison Sfax ville, port et zones industrielles.",
+    "highlights": ["économie", "Kerkennah accessible"],
+    "keywordExtras": "location voiture Sfax, car rental Sfax Tunisia"
+  },
+  {
+    "slug": "kasserine",
+    "name": "Kasserine",
+    "governorate": "Kasserine",
+    "region": "Centre-Ouest",
+    "deliveryNote": "Prise en charge Kasserine sur demande.",
+    "highlights": ["centre-ouest", "montagnes"],
+    "keywordExtras": "location voiture Kasserine"
+  },
+  {
+    "slug": "sidi-bouzid",
+    "name": "Sidi Bouzid",
+    "governorate": "Sidi Bouzid",
+    "region": "Centre",
+    "deliveryNote": "Livraison Sidi Bouzid sur réservation.",
+    "highlights": ["centre tunisien"],
+    "keywordExtras": "location voiture Sidi Bouzid"
+  },
+  {
+    "slug": "gafsa",
+    "name": "Gafsa",
+    "governorate": "Gafsa",
+    "region": "Sud-Ouest",
+    "deliveryNote": "Livraison Gafsa et départ vers Tozeur / oasis.",
+    "highlights": ["oasis", "sud tunisien"],
+    "keywordExtras": "location voiture Gafsa"
+  },
+  {
+    "slug": "tozeur",
+    "name": "Tozeur",
+    "governorate": "Tozeur",
+    "region": "Sud-Ouest",
+    "deliveryNote": "Livraison Tozeur, oasis et départ Sahara.",
+    "highlights": ["oasis", "Chott El Jerid", "tourisme désert"],
+    "keywordExtras": "location voiture Tozeur, louer voiture Tozeur"
+  },
+  {
+    "slug": "kebili",
+    "name": "Kébili",
+    "governorate": "Kébili",
+    "region": "Sud",
+    "deliveryNote": "Prise en charge Kébili et oasis du sud.",
+    "highlights": ["sud profond", "Douz proche"],
+    "keywordExtras": "location voiture Kébili"
+  },
+  {
+    "slug": "douz",
+    "name": "Douz",
+    "governorate": "Kébili",
+    "region": "Sud",
+    "deliveryNote": "Livraison Douz — porte du Sahara sur réservation.",
+    "highlights": ["désert", "festival Sahara"],
+    "keywordExtras": "location voiture Douz"
+  },
+  {
+    "slug": "gabes",
+    "name": "Gabès",
+    "governorate": "Gabès",
+    "region": "Sud-Est",
+    "deliveryNote": "Livraison Gabès ville et oasis côtière.",
+    "highlights": ["oasis côtière", "axe vers sud"],
+    "keywordExtras": "location voiture Gabès, location voiture Gabes"
+  },
+  {
+    "slug": "medenine",
+    "name": "Médenine",
+    "governorate": "Médenine",
+    "region": "Sud",
+    "deliveryNote": "Livraison Médenine et ksour du sud tunisien.",
+    "highlights": ["ksour", "Matmata"],
+    "keywordExtras": "location voiture Médenine, location voiture Medenine"
+  },
+  {
+    "slug": "djerba",
+    "name": "Djerba",
+    "governorate": "Médenine",
+    "region": "Sud",
+    "deliveryNote": "Livraison île de Djerba — Houmt Souk, zone hôtelière et aéroport DJE.",
+    "highlights": ["île", "plages", "aéroport Djerba"],
+    "keywordExtras": "location voiture Djerba, car rental Djerba Tunisia"
+  },
+  {
+    "slug": "tataouine",
+    "name": "Tataouine",
+    "governorate": "Tataouine",
+    "region": "Sud",
+    "deliveryNote": "Livraison Tataouine et circuits ksour — sur réservation.",
+    "highlights": ["Star Wars locations", "désert"],
+    "keywordExtras": "location voiture Tataouine"
+  }
+]

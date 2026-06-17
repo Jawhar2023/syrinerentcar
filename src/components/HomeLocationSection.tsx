@@ -133,6 +133,12 @@ export function HomeLocationSection() {
                   <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
+              <Link
+                to={ROUTES.locationsHub}
+                className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+              >
+                Location voiture dans toute la Tunisie →
+              </Link>
             </div>
           </motion.aside>
 

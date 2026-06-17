@@ -1,4 +1,5 @@
 import type { Car } from "@/data/cars";
+import { LOCATIONS } from "@/seo/locations";
 import { SITE } from "@/seo/seoConfig";
 
 export const localBusinessSchema = {
@@ -30,13 +31,7 @@ export const localBusinessSchema = {
   },
   areaServed: [
     { "@type": "City", name: "M'saken" },
-    { "@type": "City", name: "Sousse" },
-    { "@type": "City", name: "Monastir" },
-    { "@type": "City", name: "Tunis" },
-    { "@type": "City", name: "Hammamet" },
-    { "@type": "City", name: "Mahdia" },
-    { "@type": "City", name: "Djerba" },
-    { "@type": "City", name: "Sfax" },
+    ...LOCATIONS.map((loc) => ({ "@type": "City" as const, name: loc.name })),
     { "@type": "AdministrativeArea", name: "Sousse Governorate" },
     { "@type": "Country", name: "Tunisia" },
   ],

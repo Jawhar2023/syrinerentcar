@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Car } from "lucide-react";
 import { SocialSpeedDial } from "@/components/SocialSpeedDial";
 import { CONTACT_INFO } from "@/lib/contactInfo";
+import { locationPath } from "@/seo/locations";
 import { ROUTES } from "@/seo/seoConfig";
 import {
   ClockOutlineIcon,
@@ -42,6 +43,16 @@ export function FooterSection() {
     { labelKey: "faq" as const, to: `${ROUTES.home}#faq` },
   ];
 
+  const locationLinks = [
+    { label: "M'saken", to: ROUTES.about },
+    { label: "Sousse", to: locationPath("sousse") },
+    { label: "Monastir", to: locationPath("monastir") },
+    { label: "Tunis", to: locationPath("tunis") },
+    { label: "Hammamet", to: locationPath("hammamet") },
+    { label: "Djerba", to: locationPath("djerba") },
+    { label: "Toute la Tunisie", to: ROUTES.locationsHub },
+  ];
+
   return (
     <>
       <footer className="relative border-t border-border bg-muted/40">
@@ -51,7 +62,7 @@ export function FooterSection() {
         />
 
         <div className="container mx-auto px-4 py-12 md:py-14 lg:py-16">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-12">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8 xl:gap-10">
             {/* Brand */}
             <div className="space-y-4">
               <Link to={ROUTES.home} className="inline-flex items-center gap-2.5">
@@ -92,6 +103,24 @@ export function FooterSection() {
                     </Link>
                   );
                 })}
+              </nav>
+            </div>
+
+            {/* Locations SEO */}
+            <div className="space-y-4">
+              <h3 className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                Location voiture
+              </h3>
+              <nav className="flex flex-col gap-2.5" aria-label="Villes desservies">
+                {locationLinks.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
               </nav>
             </div>
 
