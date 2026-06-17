@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ROUTES } from "@/seo/seoConfig";
+import { locationPath } from "@/seo/locations";
 
 /** Contextual internal links with keyword-rich anchor text for SEO. */
 export function InternalLinksSection() {
@@ -16,6 +17,11 @@ export function InternalLinksSection() {
     about: ROUTES.about,
     reservation: ROUTES.reservation,
     contact: ROUTES.contact,
+    locationsHub: ROUTES.locationsHub,
+    locationSousse: locationPath("sousse"),
+    locationMonastir: locationPath("monastir"),
+    locationTunis: locationPath("tunis"),
+    locationHammamet: locationPath("hammamet"),
     faq: `${ROUTES.home}#faq`,
   };
 

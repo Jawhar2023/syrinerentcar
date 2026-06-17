@@ -96,8 +96,9 @@ const LocationCityPage = () => {
             </p>
             <h1 className="font-display text-3xl font-bold leading-tight md:text-5xl">{seo.h1}</h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Syrine Rent Car vous propose la <strong className="text-foreground">location de voiture à {location.name}</strong>{" "}
-              avec livraison depuis notre agence à M&apos;saken. {location.deliveryNote} Tarifs clairs, véhicules récents,
+              {seo.intro}{" "}
+              <strong className="text-foreground">Location voiture à {location.name}</strong>{" "}
+              avec livraison depuis M&apos;saken. {location.deliveryNote} Tarifs clairs, véhicules récents,
               réservation rapide par WhatsApp.
             </p>
           </motion.div>

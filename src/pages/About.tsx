@@ -143,6 +143,16 @@ const About = () => {
           </div>
         </section>
 
+        {/* SEO: exact keyword "location voiture msaken" for Google */}
+        <section className="border-b border-border/50 bg-card/15 py-12 md:py-16" aria-labelledby="seo-msaken-block">
+          <div className="container mx-auto max-w-3xl px-4 text-center">
+            <h2 id="seo-msaken-block" className="font-display text-2xl font-bold md:text-3xl">
+              {t("about.seoBlockTitle")}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{t("about.seoBlockText")}</p>
+          </div>
+        </section>
+
         {/* Stats */}
         <section className="border-b border-border/50 bg-card/20 py-12 md:py-14">
           <div className="container mx-auto max-w-6xl px-4">

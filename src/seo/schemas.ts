@@ -81,7 +81,7 @@ export const websiteSchema = {
   url: SITE.url,
   name: SITE.name,
   description:
-    "Car rental in Tunisia — affordable vehicles in M'saken, Sousse, Tunis and nationwide. Book online or via WhatsApp.",
+    "Location voiture pas cher M'saken, Sousse et Tunisie — citadines, SUV, automatique. Livraison aéroport Tunis & Monastir. Réservez par WhatsApp.",
   publisher: { "@id": `${SITE.url}/#organization` },
   inLanguage: ["fr", "en", "ar"],
 } as const;

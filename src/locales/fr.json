@@ -19,7 +19,7 @@
     "toggleMenu": "Ouvrir le menu"
   },
   "footer": {
-    "tagline": "Location premium avec tarifs clairs et réservation instantanée. Noté 4,9★ — remises de véhicules professionnelles et assistance 24h/24.",
+    "tagline": "Location voiture M'saken & Sousse pas cher — citadines, SUV, automatique. Livraison aéroport Tunis, Monastir, Hammamet. Réservez par WhatsApp.",
     "quickLinks": "Liens rapides",
     "vipFleet": "Flotte VIP",
     "reservation": "Réserver en ligne",
@@ -77,7 +77,7 @@
     "badgeAi": "Recommandé IA",
     "titleFind": "Trouvez votre",
     "titleRide": "véhicule idéal",
-    "subtitle": "Des véhicules sélectionnés pour chaque envie et chaque trajet.",
+    "subtitle": "Location voiture pas cher en Tunisie — citadines, SUV et automatiques pour M'saken, Sousse, Monastir et tout le Sahel. Réservez en ligne ou WhatsApp.",
     "promo": "Supercar ou berline de chauffeur ? Découvrez notre",
     "promoVip": "flotte VIP",
     "promoEnd": "avec véhicules prêts pour la conciergerie.",
@@ -125,8 +125,8 @@
     "headLine1": "Meilleure location de voitures",
     "headLine2": "à M'saken",
     "headLine3": "",
-    "seoH1": "Location de voiture en Tunisie — Syrine Rent Car",
-    "description": "Louez une voiture en Tunisie à M'saken : citadines, SUV, automatique ou manuelle. Réservation en ligne, livraison aéroport Tunis, tarifs transparents. Car rental Tunisia — affordable & hassle-free.",
+    "seoH1": "Location voiture msaken, M'saken & Sousse — pas cher",
+    "description": "Location voiture msaken et Sousse pas cher : citadines, SUV, automatique. Agence Bd Dr Taieb Hachicha — livraison aéroport Tunis & Monastir. Réservez par WhatsApp.",
     "ctaBook": "RÉSERVER",
     "ctaFleet": "VOIR LA FLOTTE",
     "stat1Val": "200+",
@@ -173,15 +173,15 @@
   "features": {
     "title": "Pourquoi",
     "brand": "Syrine Rent a Car",
-    "subtitle": "Conçu pour la vitesse, la sécurité et des expériences inoubliables.",
-    "f1t": "Réservation instantanée",
-    "f1d": "Réservez en 30 secondes. Sans paperasse, sans attente.",
-    "f2t": "Assurance tous risques",
-    "f2d": "Chaque trajet inclut une couverture complète.",
-    "f3t": "Livraison 24h/24",
-    "f3d": "Nous vous apportons le véhicule, où que vous soyez.",
-    "f4t": "Couverture Tunisie",
-    "f4d": "Livraison et prise en charge à M'saken, Sousse, Tunis, Monastir, Hammamet et aéroport Tunis-Carthage.",
+    "subtitle": "Conçu pour la location voiture pas cher en Tunisie — rapidité, sécurité et service local à M'saken.",
+    "f1t": "Réservation WhatsApp rapide",
+    "f1d": "Réservez votre location voiture en Tunisie en 2 minutes — confirmation le jour même.",
+    "f2t": "Assurance incluse",
+    "f2d": "Véhicules assurés pour rouler sereinement à Sousse, Monastir et partout en Tunisie.",
+    "f3t": "Livraison partout",
+    "f3d": "Livraison voiture à domicile, hôtel ou aéroport — M'saken, Sousse, Tunis, Hammamet, Djerba.",
+    "f4t": "Toute la Tunisie",
+    "f4d": "Location voiture Sousse, Monastir, Tunis, Hammamet, Mahdia, Sfax, Djerba — 30+ villes desservies.",
     "f5t": "Flotte premium",
     "f5d": "Véhicules sélectionnés et entretenus avec soin.",
     "f6t": "Conciergerie",
@@ -190,7 +190,7 @@
   "vipFleet": {
     "premium": "Location premium",
     "heroTitle": "Trouvez votre voiture idéale",
-    "heroSubtitle": "Parcourez notre flotte et repartez avec le bon véhicule. Simple, transparent, prêt quand vous l'êtes.",
+    "heroSubtitle": "Location voiture pas cher à M'saken et Sousse — flotte récente, livraison aéroport, réservation WhatsApp instantanée.",
     "all": "Tous",
     "allMakes": "Toutes les marques",
     "allModels": "Tous les modèles",
@@ -209,8 +209,10 @@
   "about": {
     "label": "À propos",
     "title": "Votre agence de location à M'saken, au cœur de la ville.",
-    "lead": "Syrine Rent a Car (SRC) est une agence de location de voitures implantée sur le Bd Dr Taieb Hachicha. Nous mettons à votre disposition une flotte soignée — berlines, citadines et véhicules récents — pour vos déplacements professionnels, familiaux ou touristiques.",
-    "lead2": "Notre équipe vous accueille sur place avec des tarifs clairs, un véhicule propre et un service humain : réservation par téléphone, WhatsApp ou rendez-vous en agence.",
+    "lead": "Syrine Rent a Car est votre spécialiste location voiture msaken : agence sur le Bd Dr Taieb Hachicha (4070), au cœur de M'saken. Location voiture Msaken et Sousse — berlines, citadines et véhicules récents pour tourisme, famille ou affaires.",
+    "lead2": "Louer une voiture à Msaken n'a jamais été aussi simple : tarifs clairs, véhicule propre, réservation par téléphone, WhatsApp ou directement en agence.",
+    "seoBlockTitle": "Location voiture msaken — Syrine Rent Car",
+    "seoBlockText": "Vous cherchez une location voiture msaken fiable et pas cher ? Notre agence location voiture M'saken vous accueille au Bd Dr Taieb Hachicha avec une flotte récente (Renault Clio, Kia Picanto, Hyundai i20, SUV). Livraison à Sousse, Monastir, aéroport Tunis et partout en Tunisie. Réservez votre location voiture Msaken par WhatsApp.",
     "heroImageAlt": "Façade de l'agence Syrine Rent a Car à M'saken avec flotte devant le magasin",
     "agencyBadge": "Notre agence",
     "agencyTitle": "Venez nous voir",
@@ -262,32 +264,32 @@
   },
   "faq": {
     "label": "FAQ",
-    "title": "Questions fréquentes — location voiture Tunisie",
-    "subtitle": "Tout ce qu'il faut savoir pour louer une voiture en Tunisie avec Syrine Rent Car.",
+    "title": "Questions fréquentes — location voiture M'saken, Sousse & Tunisie",
+    "subtitle": "Tout pour louer une voiture pas cher en Tunisie : tarifs, livraison aéroport, villes desservies et réservation WhatsApp.",
     "items": [
       {
-        "q": "Comment réserver une voiture en Tunisie avec Syrine Rent Car ?",
-        "a": "Parcourez notre flotte en ligne, complétez le formulaire de réservation ou envoyez un message WhatsApp. Nous confirmons rapidement les dates, le lieu de prise en charge et le modèle — book a car online Tunisia en quelques minutes."
+        "q": "Où faire une location voiture msaken pas cher ?",
+        "a": "Chez Syrine Rent Car, agence au Bd Dr Taieb Hachicha à M'saken (4070). Location voiture msaken et Msaken : citadines, SUV, livraison Sousse et aéroports — WhatsApp 26 275 640."
       },
       {
-        "q": "Proposez-vous la location de voiture à l'aéroport de Tunis ?",
-        "a": "Oui — car rental Tunis Airport et Tunisia airport pickup disponibles. Nous organisons la remise des clés à l'aéroport Tunis-Carthage (TUN) ou en gare. Idéal pour cheap airport car rental in Tunisia."
+        "q": "Comment réserver une location voiture en Tunisie ?",
+        "a": "Parcourez notre flotte, remplissez le formulaire ou envoyez un WhatsApp au 26 275 640. Nous confirmons dates, lieu de prise en charge (M'saken, Sousse, aéroport Tunis) et modèle rapidement."
       },
       {
-        "q": "Quelles villes couvrez-vous en Tunisie ?",
-        "a": "Notre agence est à M'saken, près de Sousse. Nous desservons Tunis, Sousse, Monastir, Hammamet, Mahdia, Djerba et Sfax pour la livraison et les transferts."
+        "q": "Location voiture aéroport Tunis et Monastir — c'est possible ?",
+        "a": "Oui. Prise en charge à l'aéroport Tunis-Carthage (TUN) ou Monastir (MIR), ou livraison à votre hôtel à Hammamet, Sousse ou Djerba."
       },
       {
-        "q": "Quels types de véhicules sont disponibles ?",
-        "a": "Citadines économiques, compactes automatiques, crossovers familiaux et SUV — economy, automatic, family et SUV rental Tunisia. Renault Clio, Kia Picanto, Hyundai i20, Dacia Sandero, Fiat Panda 4x4, Mahindra XUV300."
+        "q": "Quelles villes couvrez-vous pour la location de voiture ?",
+        "a": "M'saken, Sousse, Monastir, Mahdia, Tunis, Hammamet, Nabeul, Sfax, Djerba, Tozeur et plus de 30 destinations en Tunisie."
       },
       {
-        "q": "Proposez-vous la location longue durée ou mensuelle ?",
-        "a": "Oui — monthly car rental Tunisia et business car rental Tunisia pour particuliers et professionnels. Contactez-nous pour un devis long term vehicle rental Tunisia."
+        "q": "Quels véhicules proposez-vous à la location ?",
+        "a": "Citadine économique, compacte automatique, crossover et SUV : Renault Clio, Kia Picanto, Hyundai i20, Dacia Sandero, Fiat Panda 4x4, Mahindra XUV300."
       },
       {
-        "q": "Faut-il un dépôt pour louer une voiture ?",
-        "a": "Les conditions varient selon le véhicule. Demandez nos options no deposit car rental Tunisia lors de votre réservation — rent a car in Tunisia without hassle."
+        "q": "Location longue durée ou mensuelle en Tunisie ?",
+        "a": "Oui — tarifs dégressifs pour location semaine ou mois. Idéal séjour, affaires ou résidents. Contactez-nous pour un devis personnalisé."
       }
     ]
   },
@@ -295,9 +297,12 @@
     "title": "Explorer Syrine Rent Car",
     "navLabel": "Liens internes location voiture Tunisie",
     "items": [
-      { "href": "fleet", "label": "Parcourir nos voitures de location en Tunisie" },
-      { "href": "reservation", "label": "Réserver une voiture en ligne en Tunisie" },
-      { "href": "about", "label": "Notre agence de location à M'saken, Sousse" },
+      { "href": "fleet", "label": "Location voiture pas cher Tunisie — Notre flotte" },
+      { "href": "reservation", "label": "Réserver location voiture en ligne — WhatsApp" },
+      { "href": "about", "label": "Agence location voiture M'saken & Sousse" },
+      { "href": "locationsHub", "label": "Location voiture par ville en Tunisie" },
+      { "href": "locationSousse", "label": "Location voiture Sousse pas cher" },
+      { "href": "locationMonastir", "label": "Location voiture Monastir & Méstir" },
       { "href": "contact", "label": "Contact — livraison aéroport Tunis" },
       { "href": "faq", "label": "FAQ location voiture Tunisie" }
     ]

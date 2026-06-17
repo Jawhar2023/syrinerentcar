@@ -16,13 +16,13 @@ import {
 import { ROUTES, SITE } from "@/seo/seoConfig";
 
 const hubSeo = {
-  title: "Location voiture Tunisie — toutes les villes | Syrine Rent Car",
+  title: "Location voiture Tunisie — Toutes les villes pas cher | Syrine Rent Car",
   description:
-    "Louez une voiture partout en Tunisie : Sousse, M'saken, Monastir, Tunis, Hammamet, Djerba, Sfax, Tozeur et 30+ destinations. Livraison depuis notre agence — réservation WhatsApp.",
+    "Louez une voiture pas cher partout en Tunisie : Sousse, M'saken, Monastir, Tunis, Hammamet, Djerba, Sfax, Tozeur. Livraison aéroport, réservation WhatsApp — agence locale M'saken.",
   keywords:
-    "location voiture Tunisie, louer voiture Tunisie, car rental Tunisia, location voiture Sousse, location voiture Monastir, location voiture Hammamet, location voiture Djerba, location auto par ville",
+    "location voiture Tunisie, location voiture pas cher Tunisie, louer voiture Sousse, location voiture Monastir, location voiture Hammamet, location voiture Djerba, location voiture par ville, Syrine Rent Car",
   canonical: `${SITE.url}${LOCATIONS_HUB_PATH}`,
-  h1: "Location de voiture en Tunisie — toutes nos zones",
+  h1: "Location voiture en Tunisie — toutes nos villes",
 };
 
 const LocationsHubPage = () => {

@@ -47,15 +47,25 @@ export function getNearbyLocations(slug: string, limit = 6): LocationCity[] {
 
 export function buildLocationSeo(location: LocationCity) {
   const path = locationPath(location.slug);
-  const title = `Location voiture ${location.name} | Syrine Rent Car Tunisie`;
-  const description = `Louez une voiture à ${location.name} (${location.governorate}) avec Syrine Rent Car. ${location.deliveryNote} Citadines, SUV, automatique. Réservation WhatsApp — agence M'saken.`;
-  const keywords = `${location.keywordExtras}, location voiture ${location.governorate}, louer voiture Tunisie, Syrine Rent Car`;
+  const title = `Location voiture ${location.name} pas cher | Syrine Rent Car`;
+  const description = `Louez une voiture pas cher à ${location.name} (${location.governorate}). ${location.deliveryNote} Citadines, SUV, automatique — réservation WhatsApp, livraison hôtel & aéroport. Agence M'saken.`;
+  const keywords = [
+    location.keywordExtras,
+    `location voiture ${location.name} pas cher`,
+    `louer voiture ${location.name}`,
+    `location voiture ${location.governorate}`,
+    `location auto ${location.name} Tunisie`,
+    `voiture de location ${location.name}`,
+    "location voiture pas cher Tunisie",
+    "Syrine Rent Car",
+  ].join(", ");
   return {
     title,
     description,
     keywords,
     canonical: `${SITE.url}${path}`,
-    h1: `Location de voiture à ${location.name}`,
+    h1: `Location voiture pas cher à ${location.name}`,
+    intro: `Besoin d'une location voiture à ${location.name} ? Syrine Rent Car vous propose des tarifs compétitifs, des véhicules récents et une livraison rapide depuis notre agence à M'saken.`,
   };
 }
 

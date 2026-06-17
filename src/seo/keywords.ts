@@ -1,0 +1,49 @@
+/** High-intent SEO keywords — Tunisia car rental (FR + EN). */
+export const SEO_KEYWORDS = {
+  fr: [
+    "location voiture Tunisie",
+    "location voiture msaken",
+    "location voiture M'saken",
+    "location voiture Msaken",
+    "location voiture Sousse",
+    "location voiture Monastir",
+    "location voiture pas cher Tunisie",
+    "louer voiture Sousse",
+    "louer voiture M'saken",
+    "agence location voiture Sousse",
+    "location voiture aéroport Tunis",
+    "location voiture aéroport Monastir",
+    "location voiture Hammamet",
+    "location voiture Djerba",
+    "location voiture automatique Tunisie",
+    "location SUV Tunisie",
+    "location voiture sans chauffeur Tunisie",
+    "réserver voiture WhatsApp Tunisie",
+    "voiture de location Sousse",
+    "location auto M'saken 4070",
+    "car rental Tunisia",
+    "rent a car Sousse Tunisia",
+    "cheap car rental Tunisia",
+  ].join(", "),
+  en: [
+    "car rental Tunisia",
+    "rent a car Tunisia",
+    "car hire Sousse",
+    "car rental M'saken",
+    "cheap car rental Tunisia",
+    "Tunis airport car rental",
+    "Monastir airport car rental",
+    "automatic car rental Tunisia",
+    "SUV rental Tunisia",
+    "book car online Tunisia",
+    "WhatsApp car rental Tunisia",
+  ].join(", "),
+} as const;
+
+export const COMMERCIAL_PHRASES = {
+  fr: {
+    cta: "Réservez par WhatsApp — confirmation rapide",
+    delivery: "Livraison à domicile, hôtel ou aéroport",
+    trust: "Tarifs transparents · véhicules récents · agence locale M'saken",
+  },
+} as const;
