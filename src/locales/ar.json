@@ -87,6 +87,13 @@
     "found_one": "مركبة واحدة",
     "found_other": "{{count}} مركبة"
   },
+  "home": {
+    "promoEyebrow": "كراء السيارات بتونس",
+    "promoTitle": "تسليم واستلام بمطار تونس قرطاج",
+    "promoDesc": "سيارات حديثة ومكيفة. أسعار مناسبة وخدمة سريعة واحترافية — متوفرون 24/24 و7/7.",
+    "promoCta": "احجز الآن",
+    "promoImageAlt": "أسطول Syrine Rent Car — كراء سيارات بتونس مع تسليم مطار تونس قرطاج"
+  },
   "reservation": {
     "badge": "الحجز",
     "titleReserve": "احجز",

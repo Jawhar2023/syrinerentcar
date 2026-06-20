@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SimpleProcessSection from "@/components/SimpleProcessSection";
 import CarShowcase from "@/components/CarShowcase";
+import { PromoBannerSection } from "@/components/PromoBannerSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import { HomeLocationSection } from "@/components/HomeLocationSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -36,6 +37,8 @@ const Index = () => {
           </h2>
           <CarShowcase sourceCars={fleet} cardSize="large" showPromoToolbar />
         </section>
+
+        <PromoBannerSection />
 
         <section aria-labelledby="reviews-heading">
           <h2 id="reviews-heading" className="sr-only">

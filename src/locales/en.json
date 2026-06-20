@@ -87,6 +87,13 @@
     "found_one": "{{count}} vehicle found",
     "found_other": "{{count}} vehicles found"
   },
+  "home": {
+    "promoEyebrow": "Car rental Tunisia",
+    "promoTitle": "Tunis-Carthage airport delivery",
+    "promoDesc": "Recent air-conditioned vehicles. Competitive rates, fast professional service — available 24/7.",
+    "promoCta": "Book now",
+    "promoImageAlt": "Syrine Rent Car fleet — car rental in Tunis with Tunis-Carthage airport delivery"
+  },
   "reservation": {
     "badge": "Booking",
     "titleReserve": "Reserve your",

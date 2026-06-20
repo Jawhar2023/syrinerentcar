@@ -87,6 +87,13 @@
     "found_one": "{{count}} véhicule trouvé",
     "found_other": "{{count}} véhicules trouvés"
   },
+  "home": {
+    "promoEyebrow": "Location de voitures Tunisie",
+    "promoTitle": "Livraison aéroport Tunis-Carthage",
+    "promoDesc": "Véhicules récents et climatisés. Tarifs compétitifs, service rapide et professionnel — disponible 24h/24 et 7j/7.",
+    "promoCta": "Réserver maintenant",
+    "promoImageAlt": "Flotte Syrine Rent Car — location de voitures à Tunis, livraison aéroport Tunis-Carthage"
+  },
   "reservation": {
     "badge": "Réservation",
     "titleReserve": "Réservez votre",
