@@ -15,14 +15,13 @@ import {
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import { CONTACT_INFO } from "@/lib/contactInfo";
+import { SITE_IMAGES } from "@/lib/siteImages";
 import { cn } from "@/lib/utils";
 import { SEOHead } from "@/seo/SEOHead";
 import { JsonLd } from "@/seo/JsonLd";
 import { BreadCrumb } from "@/seo/BreadCrumb";
 import { breadcrumbSchema } from "@/seo/schemas";
 import { PAGES, ROUTES } from "@/seo/seoConfig";
-
-const STOREFRONT_IMAGE = "/syrine-agency-storefront.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -118,8 +117,8 @@ const About = () => {
               >
                 <div className="overflow-hidden rounded-2xl border border-border/60 shadow-[0_0_0_1px_hsl(351_96%_44%/0.12),0_32px_64px_-24px_rgba(0,0,0,0.65)]">
                   <img
-                    src={STOREFRONT_IMAGE}
-                    alt="Façade de l'agence Syrine Rent Car — location de voiture Bd Dr Taieb Hachicha, M'saken 4070"
+                    src={SITE_IMAGES.fleetPromo}
+                    alt="Flotte Syrine Rent Car — location de voitures à Tunis, livraison aéroport Tunis-Carthage"
                     className="aspect-[4/3] w-full object-cover"
                     loading="eager"
                     decoding="async"
@@ -217,8 +216,8 @@ const About = () => {
               className="overflow-hidden rounded-2xl border border-border/60 shadow-[0_24px_48px_-24px_rgba(0,0,0,0.55)]"
             >
               <img
-                src={STOREFRONT_IMAGE}
-                alt="Agence Syrine Rent Car à M'saken — location voiture Sousse, Tunisie"
+                src={SITE_IMAGES.fleetPromo}
+                alt="Flotte Syrine Rent Car — location de voitures Tunisie, livraison aéroport Tunis-Carthage"
                 className="max-h-[520px] w-full object-cover object-center"
                 loading="lazy"
                 decoding="async"

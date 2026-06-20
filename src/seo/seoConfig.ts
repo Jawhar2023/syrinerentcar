@@ -29,7 +29,7 @@ export const SITE = {
     lat: 35.7301,
     lng: 10.5594,
   },
-  ogImage: "https://www.syrinerentcar.com/syrine-agency-storefront.png",
+  ogImage: "https://www.syrinerentcar.com/syrine-fleet-promo.png",
   twitterHandle: "@syrine_rent_car",
   ga4Id: "G-XXXXXXXXXX",
   gscVerification: "google-site-verification=XXXXXXXXXXXXXXXX",
@@ -78,7 +78,7 @@ export const PAGES: Record<PageSeoKey, PageSeo> = {
   fleet: {
     title: "Location voiture pas cher Tunisie — Flotte SUV & automatique | Syrine Rent Car",
     description:
-      "Louez Renault Clio, Kia Picanto, Hyundai i20, Dacia Sandero, Fiat Panda 4x4 ou Mahindra XUV300. Location voiture pas cher en Tunisie : citadine, SUV, automatique. Prise en charge M'saken, livraison Sousse & aéroports.",
+      "Louez Renault Clio, Kia Picanto, Hyundai i20, Dacia Sandero, Fiat Panda City Cross ou Mahindra XUV300. Location voiture pas cher en Tunisie : citadine, SUV, automatique. Prise en charge M'saken, livraison Sousse & aéroports.",
     keywords:
       "location voiture pas cher Tunisie, flotte location auto Sousse, louer SUV Tunisie, location voiture automatique Sousse, location 4x4 Tunisie, citadine pas cher M'saken, economy car rental Tunisia",
     canonical: `${SITE.url}/notre-flotte`,
@@ -129,7 +129,7 @@ export const FAQ_ITEMS_FR: { question: string; answer: string }[] = [
   {
     question: "Quels véhicules louer pour un séjour en Tunisie ?",
     answer:
-      "Citadine pas cher (Kia Picanto, Renault Clio), compacte automatique (Hyundai i20, Skoda Fabia), crossover familial (Dacia Sandero) et SUV (Mahindra XUV300, Fiat Panda 4x4). Idéal tourisme, affaires ou longue durée.",
+      "Citadine pas cher (Kia Picanto, Renault Clio), compacte automatique (Hyundai i20, Skoda Fabia), crossover familial (Dacia Sandero) et SUV (Mahindra XUV300, Fiat Panda City Cross). Idéal tourisme, affaires ou longue durée.",
   },
   {
     question: "Location voiture longue durée ou mensuelle en Tunisie ?",

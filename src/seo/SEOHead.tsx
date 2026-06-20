@@ -35,7 +35,7 @@ export function SEOHead({ page, overrides, noindex = false }: SEOHeadProps) {
       <meta property="og:description" content={meta.description} />
       <meta property="og:url" content={meta.canonical} />
       <meta property="og:image" content={SITE.ogImage} />
-      <meta property="og:image:alt" content={`${SITE.name} — car rental Tunisia, M'saken`} />
+      <meta property="og:image:alt" content={`${SITE.name} — location de voitures Tunisie, flotte et livraison aéroport Tunis-Carthage`} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={SITE.twitterHandle} />

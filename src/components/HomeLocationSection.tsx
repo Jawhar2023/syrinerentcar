@@ -2,9 +2,8 @@ import { motion } from "framer-motion";
 import { Clock, ExternalLink, Mail, MapPin, Navigation, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CONTACT_INFO } from "@/lib/contactInfo";
+import { SITE_IMAGES } from "@/lib/siteImages";
 import { ROUTES } from "@/seo/seoConfig";
-
-const STOREFRONT_IMAGE = "/syrine-agency-storefront.png";
 
 /** Home page — agency map & address (Localisation). */
 export function HomeLocationSection() {
@@ -59,8 +58,8 @@ export function HomeLocationSection() {
           >
             <div className="relative h-44 overflow-hidden sm:h-52">
               <img
-                src={STOREFRONT_IMAGE}
-                alt="Façade Syrine Rent Car — agence location voiture Tunisie, M'saken Sousse"
+                src={SITE_IMAGES.fleetPromo}
+                alt="Flotte Syrine Rent Car — location de voitures Tunisie, livraison aéroport Tunis-Carthage"
                 width={640}
                 height={480}
                 className="h-full w-full object-cover"

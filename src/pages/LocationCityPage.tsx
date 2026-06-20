@@ -61,7 +61,7 @@ const LocationCityPage = () => {
     },
     {
       q: `Quels véhicules sont disponibles pour ${location.name} ?`,
-      a: "Renault Clio, Kia Picanto, Skoda Fabia, Hyundai i20, Dacia Sandero Stepway, Fiat Panda 4x4 et Mahindra XUV300 — citadines, compactes et SUV pour tourisme ou affaires.",
+      a: "Renault Clio, Kia Picanto, Skoda Fabia, Hyundai i20, Dacia Sandero Stepway, Fiat Panda City Cross et Mahindra XUV300 — citadines, compactes et SUV pour tourisme ou affaires.",
     },
   ];
 
