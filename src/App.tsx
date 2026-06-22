@@ -14,6 +14,7 @@ import { JsonLd } from "@/seo/JsonLd";
 import { localBusinessSchema, organizationSchema, websiteSchema } from "@/seo/schemas";
 import { LegacyCarRedirect } from "@/components/LegacyRedirects";
 import { ROUTES } from "@/seo/seoConfig";
+import { LOCATIONS, locationPath } from "@/seo/locations";
 
 const Index = lazyWithRetry(() => import("./pages/Index.tsx"));
 const VipFleet = lazyWithRetry(() => import("./pages/VipFleet.tsx"));
@@ -52,7 +53,9 @@ const App = () => (
                 <Route path={ROUTES.contact} element={<Contact />} />
 
                 <Route path={ROUTES.locationsHub} element={<LocationsHubPage />} />
-                <Route path="/location-voiture-:citySlug" element={<LocationCityPage />} />
+                {LOCATIONS.map((loc) => (
+                  <Route key={loc.slug} path={locationPath(loc.slug)} element={<LocationCityPage />} />
+                ))}
                 <Route path="/about" element={<Navigate to={ROUTES.about} replace />} />
                 <Route path="/vip-fleet" element={<Navigate to={ROUTES.fleet} replace />} />
                 <Route path="/vip-fleet/car/:carId" element={<LegacyCarRedirect />} />

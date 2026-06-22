@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Car, MapPin, Phone, ShieldCheck, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -15,17 +15,19 @@ import {
   getNearbyLocations,
   locationPath,
   LOCATIONS_HUB_PATH,
+  parseCitySlugFromPathname,
 } from "@/seo/locations";
-import { ROUTES } from "@/seo/seoConfig";
+import { ROUTES, SITE } from "@/seo/seoConfig";
 
 const LocationCityPage = () => {
-  const { citySlug } = useParams<{ citySlug: string }>();
+  const { pathname } = useLocation();
+  const citySlug = parseCitySlugFromPathname(pathname);
   const location = citySlug ? getLocationBySlug(citySlug) : undefined;
 
   if (!location) {
     return (
       <div className="min-h-screen bg-background text-foreground">
-        <SEOHead page="about" noindex overrides={{ title: "Page introuvable", canonical: ROUTES.home }} />
+        <SEOHead page="about" noindex overrides={{ title: "Page introuvable", canonical: `${SITE.url}${LOCATIONS_HUB_PATH}` }} />
         <header>
           <Navbar variant="default" />
         </header>

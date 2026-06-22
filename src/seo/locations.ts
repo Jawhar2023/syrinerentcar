@@ -19,6 +19,15 @@ export function locationPath(slug: string): string {
   return `/location-voiture-${slug}`;
 }
 
+/** Extract city slug from paths like /location-voiture-sousse (React Router cannot match inline `-:param`). */
+export function parseCitySlugFromPathname(pathname: string): string | undefined {
+  const match = pathname.match(/^\/location-voiture-([a-z0-9]+(?:-[a-z0-9]+)*)\/?$/i);
+  if (!match) return undefined;
+  const slug = match[1].toLowerCase();
+  if (slug === LOCATION_HUB_SLUG || slug === "msaken") return undefined;
+  return slug;
+}
+
 export const LOCATIONS_HUB_PATH = `/location-voiture-${LOCATION_HUB_SLUG}`;
 
 export function getLocationBySlug(slug: string): LocationCity | undefined {
@@ -51,13 +60,20 @@ export function buildLocationSeo(location: LocationCity) {
   const description = `Louez une voiture pas cher à ${location.name} (${location.governorate}). ${location.deliveryNote} Citadines, SUV, automatique — réservation WhatsApp, livraison hôtel & aéroport. Agence M'saken.`;
   const keywords = [
     location.keywordExtras,
+    `location voiture ${location.name}`,
     `location voiture ${location.name} pas cher`,
     `louer voiture ${location.name}`,
+    `louer une voiture à ${location.name}`,
+    `agence location voiture ${location.name}`,
     `location voiture ${location.governorate}`,
+    `location auto ${location.name}`,
     `location auto ${location.name} Tunisie`,
     `voiture de location ${location.name}`,
+    `location voiture pas cher ${location.name}`,
     "location voiture pas cher Tunisie",
+    "louer voiture pas cher Tunisie",
     "Syrine Rent Car",
+    "location voiture M'saken livraison",
   ].join(", ");
   return {
     title,
