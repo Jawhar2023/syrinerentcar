@@ -117,7 +117,7 @@ const About = () => {
               >
                 <div className="overflow-hidden rounded-2xl border border-border/60 shadow-[0_0_0_1px_hsl(351_96%_44%/0.12),0_32px_64px_-24px_rgba(0,0,0,0.65)]">
                   <img
-                    src={SITE_IMAGES.fleetPromo}
+                    src={SITE_IMAGES.fleetMarketing}
                     alt="Flotte Syrine Rent Car — location de voitures à Tunis, livraison aéroport Tunis-Carthage"
                     className="aspect-[4/3] w-full object-cover"
                     loading="eager"
@@ -216,7 +216,7 @@ const About = () => {
               className="overflow-hidden rounded-2xl border border-border/60 shadow-[0_24px_48px_-24px_rgba(0,0,0,0.55)]"
             >
               <img
-                src={SITE_IMAGES.fleetPromo}
+                src={SITE_IMAGES.fleetMarketing}
                 alt="Flotte Syrine Rent Car — location de voitures Tunisie, livraison aéroport Tunis-Carthage"
                 className="max-h-[520px] w-full object-cover object-center"
                 loading="lazy"

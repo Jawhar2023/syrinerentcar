@@ -58,7 +58,7 @@ export function HomeLocationSection() {
           >
             <div className="relative h-44 overflow-hidden sm:h-52">
               <img
-                src={SITE_IMAGES.fleetPromo}
+                src={SITE_IMAGES.fleetMarketing}
                 alt="Flotte Syrine Rent Car — location de voitures Tunisie, livraison aéroport Tunis-Carthage"
                 width={640}
                 height={480}

@@ -29,7 +29,7 @@ export const SITE = {
     lat: 35.7301,
     lng: 10.5594,
   },
-  ogImage: "https://www.syrinerentcar.com/syrine-fleet-promo.png",
+  ogImage: "https://www.syrinerentcar.com/syrine-fleet-marketing.png",
   twitterHandle: "@syrine_rent_car",
   ga4Id: "G-XXXXXXXXXX",
   gscVerification: "google-site-verification=XXXXXXXXXXXXXXXX",
