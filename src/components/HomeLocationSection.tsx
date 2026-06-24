@@ -36,7 +36,7 @@ export function HomeLocationSection() {
             Notre agence à M&apos;saken
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
-            Passez nous voir au Bd Dr Taieb Hachicha — prise en charge sur place, livraison Sousse et{" "}
+            Passez nous voir Rue Médina Monawra, près du Café Zitouna — prise en charge sur place, livraison Sousse et{" "}
             <Link to={ROUTES.about} className="text-primary hover:underline">
               transfert aéroport Tunis
             </Link>

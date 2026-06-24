@@ -13,14 +13,15 @@ export const SITE = {
   fax: "+21673313126",
   email: "syrinerentcar@gmail.com",
   address: {
-    street: "Bd Dr Taieb Hachicha",
+    street: "Rue Médina Monawra, près du Café Zitouna",
     locality: "M'saken",
     region: "Sousse",
     postalCode: "4070",
     countryCode: "TN",
     countryName: "Tunisie",
   },
-  fullAddress: "Bd Dr Taieb Hachicha, M'saken 4070, Sousse, Tunisie",
+  fullAddress:
+    "Rue Médina Monawra, à quelques mètres du Café Zitouna, M'saken, Sousse, Tunisie",
   geo: {
     region: "TN-51",
     placename: "M'saken, Sousse, Tunisie",
@@ -61,15 +62,15 @@ export const PAGES: Record<PageSeoKey, PageSeo> = {
   home: {
     title: "Location voiture msaken & Sousse pas cher | Syrine Rent Car",
     description:
-      "Location voiture msaken pas cher — agence Syrine Rent Car au Bd Dr Taieb Hachicha, M'saken 4070. Louez une voiture à Msaken, Sousse, Monastir. Livraison aéroport, réservation WhatsApp.",
+      "Location voiture msaken pas cher — agence Syrine Rent Car, Rue Médina Monawra (près du Café Zitouna), M'saken, Sousse. Louez à Msaken, Monastir. Livraison aéroport, réservation WhatsApp.",
     keywords: SEO_KEYWORDS.fr,
     canonical: `${SITE.url}/`,
     h1: "Location voiture msaken, M'saken & Sousse — pas cher",
   },
   about: {
-    title: "Location voiture msaken — Agence Syrine Rent Car | Sousse 4070",
+    title: "Location voiture msaken — Agence Syrine Rent Car | M'saken, Sousse",
     description:
-      "Location voiture msaken : agence Syrine Rent Car, Bd Dr Taieb Hachicha, M'saken 4070. Louer voiture Msaken et Sousse pas cher — livraison aéroport Tunis, Monastir. WhatsApp 26 275 640.",
+      "Location voiture msaken : agence Syrine Rent Car, Rue Médina Monawra (près du Café Zitouna), M'saken, Sousse. Louer voiture Msaken pas cher — livraison aéroport Tunis, Monastir. WhatsApp 26 275 640.",
     keywords:
       "location voiture msaken, location voiture M'saken, agence location voiture msaken, louer voiture msaken, location voiture Msaken pas cher, location voiture Sousse, Syrine Rent Car",
     canonical: `${SITE.url}/location-voiture-msaken`,
@@ -96,7 +97,7 @@ export const PAGES: Record<PageSeoKey, PageSeo> = {
   contact: {
     title: "Contact location voiture M'saken & Sousse | WhatsApp +216 26 275 640",
     description:
-      "Contactez Syrine Rent Car pour louer une voiture en Tunisie : agence M'saken, Bd Dr Taieb Hachicha. Téléphone, WhatsApp, email. Livraison Sousse, Monastir, Hammamet, aéroport Tunis. Lun–sam 8h–18h.",
+      "Contactez Syrine Rent Car pour louer une voiture en Tunisie : Rue Médina Monawra, près du Café Zitouna, M'saken, Sousse. Téléphone, WhatsApp, email. Livraison Monastir, Hammamet, aéroport Tunis. Lun–sam 8h–18h.",
     keywords:
       "contact location voiture Sousse, téléphone location voiture M'saken, WhatsApp louer voiture Tunisie, adresse agence location auto Sousse, location voiture aéroport Tunis contact",
     canonical: `${SITE.url}/contact`,
@@ -109,7 +110,7 @@ export const FAQ_ITEMS_FR: { question: string; answer: string }[] = [
   {
     question: "Où faire une location voiture msaken pas cher ?",
     answer:
-      "Pour une location voiture msaken, rendez-vous chez Syrine Rent Car au Bd Dr Taieb Hachicha (4070). Agence locale M'saken / Msaken : citadines, SUV, automatique — réservation WhatsApp au 26 275 640.",
+      "Pour une location voiture msaken, rendez-vous chez Syrine Rent Car, Rue Médina Monawra (près du Café Zitouna), au cœur de M'saken, Sousse. Citadines, SUV, automatique — réservation WhatsApp au 26 275 640.",
   },
   {
     question: "Comment réserver une location voiture en Tunisie avec Syrine Rent Car ?",

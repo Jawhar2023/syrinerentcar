@@ -90,7 +90,7 @@ export const MSAKEN_AGENCY_LOCATION: LocationCity = {
   name: "M'saken",
   governorate: "Sousse",
   region: "Sahel",
-  deliveryNote: "Agence au Bd Dr Taieb Hachicha — prise en charge immédiate sur place.",
+  deliveryNote: "Agence Rue Médina Monawra, près du Café Zitouna — prise en charge immédiate sur place.",
   highlights: ["agence principale", "Sahel", "livraison nationale"],
   keywordExtras: "location voiture M'saken, location voiture Msaken, louer voiture M'saken Sousse",
 };

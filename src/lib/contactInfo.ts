@@ -6,10 +6,11 @@ export const CONTACT_INFO = {
   faxDisplay: "73 313 126",
   faxTel: "+21673313126",
   email: "syrinerentcar@gmail.com",
-  address: "Bd Dr Taieb Hachicha, M'saken 4070",
+  address:
+    "Notre agence est située à Rue Médina Monawra, à quelques mètres du Café Zitouna, au cœur de M'saken, Sousse",
   mapsQuery: "https://maps.app.goo.gl/uaW7aGgaw6e4AvTZ7",
   mapEmbedSrc:
-    "https://www.google.com/maps?q=Syrine+Rent+a+Car,+Bd+Dr+Taieb+Hachicha,+M'saken+4070,+Tunisia&output=embed&hl=fr&z=16",
+    "https://www.google.com/maps?q=Syrine+Rent+a+Car,+Rue+M%C3%A9dina+Monawra,+M'saken,+Sousse,+Tunisia&output=embed&hl=fr&z=16",
   googleReviewUrl:
     "https://search.google.com/local/writereview?placeid=ChIJXXSf1Wj1_RIRCSi1FRXaTHI",
   googleRating: "3.6",
