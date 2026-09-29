@@ -7,6 +7,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import { HomeLocationSection } from "@/components/HomeLocationSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FooterSection from "@/components/FooterSection";
+import CarGallerySection from "@/components/CarGallerySection";
 import { useMergedFleetCars } from "@/hooks/useDrivexData";
 import { SEOHead } from "@/seo/SEOHead";
 import { JsonLd } from "@/seo/JsonLd";
@@ -54,6 +55,13 @@ const Index = () => {
             Comment louer une voiture chez Syrine Rent Car
           </h2>
           <SimpleProcessSection />
+        </section>
+
+        <section aria-labelledby="gallery-heading">
+          <h2 id="gallery-heading" className="sr-only">
+            Galerie de nos véhicules
+          </h2>
+          <CarGallerySection />
         </section>
 
         <section aria-labelledby="features-heading">
